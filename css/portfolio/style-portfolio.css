@@ -1,0 +1,19 @@
+@import "../standart_css/normalize.css";
+
+@import "../standart_css/base.css";
+
+@import "../fonts/fonts.css";
+
+@import "../fonts/josefinsans/josefinsans.css";
+
+@import "../standart_css/menu.css";
+
+@import "../standart_css/contact.css";
+
+@import "../standart_css/footer.css";
+
+@import "../standart_css/lightbox.css";
+
+@import "../standart_css/play_btn.css";
+
+@import "ui-kit-portfolio.css";

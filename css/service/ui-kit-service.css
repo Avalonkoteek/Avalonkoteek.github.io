@@ -1,0 +1,302 @@
+.service__video-background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -10;
+  /* background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat; */
+  background-size: cover;
+  transition: 1s opacity;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.service__background-filter {
+  background-color: #18181a;
+  opacity: 0.84;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 50vh;
+  z-index: -9;
+}
+.service__header {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.service__h2 {
+  color: #e2e2e2;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 40px;
+}
+.vertical-arrow {
+  width: 1px;
+  height: 40px;
+  position: absolute;
+  bottom: 5px;
+  background-color: #ce9c78;
+}
+
+/* service */
+.service-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service-content__wrapper {
+  width: 100%;
+  /* height: 50vh; */
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: #333;
+}
+
+.service-content__wrapper
+/* visual content */
+
+.service-content__face1 {
+  flex: 1 0 450px;
+  /* height: 50vh; */
+  min-height: 300px;
+
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.service-content__visual {
+  transform: translateX(100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s all ease-in-out;
+  background-color: rgb(15, 15, 17);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  text-shadow: #18181a;
+  color: #fff;
+}
+
+/* text content */
+
+.service-content__face2 {
+  flex: 1 0 450px;
+  height: 50vh;
+  min-height: 300px;
+  max-height: 500px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background-color: #333;
+}
+.service-content__text {
+  transform: translateX(100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s all ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 16px;
+  text-shadow: #18181a;
+  color: #aaa;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.service-content__text-title {
+  color: #ce9c78;
+  font-size: 40px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+.service-content__text-deskription {
+  width: 100%;
+}
+/* content position */
+.is-selected {
+  transform: translateX(0%);
+}
+.move-left {
+  transform: translateX(-100%);
+}
+
+/* navigation */
+.service-content__navigation {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  z-index: 4;
+}
+.service-content__btn {
+  width: 50%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #e2e2e2;
+  transition: 0.4s all;
+}
+.service-content__btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.inactive {
+  background-color: rgba(50, 50, 50, 0.8);
+  cursor: not-allowed;
+}
+.service-content__btn:hover {
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+.navigation-group {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  transform: translate(0%);
+}
+.btn-nav {
+  flex: 1 0 100px;
+  height: 60px;
+  color: #e2e2e2;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: 0.9s all;
+}
+.btn-nav:hover {
+  background-color: #ce9c78;
+  color: #fff;
+}
+
+/*Доп услуги*/
+.additional-services {
+  background-color: #18181a;
+  width: 100%;
+}
+.additional-services__wrapper {
+  padding-top: 160px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.additional-services-item {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.additional-services-item__image-box {
+  width: 100%;
+  height: 220px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  margin-bottom: 30px;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.additional-services-item__image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.filter--black {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 220px;
+  position: absolute;
+  z-index: 5;
+  top: 0px;
+  transition: 0.9s all;
+}
+.additional-services-item__image-box:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.additional-services-item__image-box:hover .filter--black {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.additional-services-item__text-box {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal;
+  margin-left: 40px;
+  color: #858588;
+}
+.deskription > p {
+  font-size: 14px;
+}
+
+.additional-services-item__title {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  color: #fff;
+}
+
+.image--cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.slideshow-lightbox-btn {
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid #ce9c78;
+  position: absolute;
+  bottom: 80px;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 6px;
+  background-color: #ce9c78;
+}
+.service-content__wrapper:nth-of-type(2) .service-content__face1 {
+  order: 1;
+}
+.service-content__wrapper:nth-of-type(2) .service-content__face2 {
+  order: 0;
+}
+@media screen and (max-width: 916px) {
+  .service-content__wrapper:nth-of-type(2) .service-content__face1 {
+    order: 0;
+  }
+  .service-content__wrapper:nth-of-type(2) .service-content__face2 {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .service-content__wrapper {
+    height: auto;
+  }
+  .service-content__face1 {
+    height: 300px;
+  }
+  .service-content__face2 {
+    height: 300px;
+  }
+}
