@@ -30,4 +30,12 @@ function sendRequest(method, url) {
 function addItem(data) {
   const videoArr = data.filter(element => element.type == "video");
   console.log(videoArr);
+
+  $("input[name='radio-buttons-group']").change(function() {
+    if ($("input[value='kn1']").prop("checked")) {
+        $('.block').css("display", "block");  // Этот код сработает
+    } else {
+        $('.block').css("display", "none");  // И этот тоже
+    }
+});
 }
