@@ -25,8 +25,11 @@ function sendRequest(method, url, body=null){
     });
     
 }
+function addItem(data){
+    console.log(data['id']);
+} 
 sendRequest('GET', requestURL)
-.then(data=> console.log(data))
+.then(data=> console.log(data['id']))
 .catch(err => console.log(err));
 
 // sendRequest('POST', requestURL,body)
