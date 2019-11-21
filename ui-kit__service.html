@@ -27,18 +27,18 @@
         </div>
       </nav>
 
-      <!-- <video
+      <video
         class="service__video-background"
         width="100%"
         loop
         preload="metadata"
         muted
-        src="img/assets/bg.mp4"
+        src="img/service/background/pano-000000_1.mp4"
         id="bgvid"
         playsinline
         autoplay
       ></video>
-    -->
+   
 
       <div class="service-header__inner">
         <h1 class="service-header__h">НАШИ УСЛУГИ</h1>
@@ -58,6 +58,8 @@
             data-url="rLbFOhm8VUo"
             class="service-section__visual-item js-visual-content  move-left lightbox-js lightbox-iframe-js"
           >
+          <img class="play-btn" src="img/service/play-button.svg"></img>
+          <div class="service-section__visual-item--black-filter"></div>
             <img
               src="img/service/Видео/интерьер.jpg"
               class="image--cover"
@@ -69,6 +71,8 @@
             data-url="rLbFOhm8VUo"
             class="service-section__visual-item js-visual-content move-left lightbox-js lightbox-iframe-js"
           >
+          <img class="play-btn" src="img/service/play-button.svg"></img>
+          <div class="service-section__visual-item--black-filter"></div>
             <img
               src="img/service/Видео/инфографика.jpg "
               class="image--cover"
@@ -96,10 +100,10 @@
           </div>
         </div>
         <div class="service-section__text-box">
-          <div class="navigation-group js-tab-trigger">
-            <button class="btn-nav"></button>
-            <button class="btn-nav"></button>
-            <button class="btn-nav"></button>
+          <div class="service-section__navigation-group js-tab-trigger">
+            <button class="btn-nav">Интерьер</button>
+            <button class="btn-nav">Аэросъемка</button>
+            <button class="btn-nav">Монтаж</button>
           </div>
           <div class="service-content__text js-text-content">
             <div class="service-content__text-title">Интерьер</div>
@@ -130,12 +134,13 @@
           </div>
         </div>
       </section>
-      <section class="service-section" style="display:none;">
-        <div class="service-content__wrapper">
-          <div class="service-content__face1">
+      <section class="service-section js-slider-wrapper" >
+        
+          <div class="service-section__visual-box js-image-wrapper">
             <div
               class="service-section__visual-item js-visual-content  move-left"
             >
+           
               <img
                 src="img/service/Фото/шир2-min.jpg"
                 class="image--cover"
@@ -188,7 +193,12 @@
               </button>
             </div>
           </div>
-          <div class="service-content__face2">
+          <div class="service-section__text-box">
+              <div class="service-section__navigation-group js-tab-trigger">
+                  <button class="btn-nav">Интерьер</button>
+                  <button class="btn-nav">Аэросъемка</button>
+                  <button class="btn-nav">Монтаж</button>
+                </div>
             <div class="service-content__text js-text-content">
               <div class="service-content__text-title">
                 Широкоугольная съемка
@@ -218,11 +228,11 @@
               </div>
             </div>
           </div>
-        </div>
+    
       </section>
-      <section class="service-section" style="display:none;">
-        <div class="service-content__wrapper">
-          <div class="service-content__face1">
+      <section class="service-section js-slider-wrapper" >
+ 
+          <div class="service-section__visual-box js-image-wrapper">
             <div
               class="service-section__visual-item js-visual-content  move-left lightbox-js lightbox-iframe-js"
               data-type="panorama"
@@ -265,7 +275,12 @@
               </button>
             </div>
           </div>
-          <div class="service-content__face2">
+          <div class="service-section__text-box">
+              <div class="service-section__navigation-group js-tab-trigger">
+                  <button class="btn-nav">Интерьер</button>
+                  <button class="btn-nav">Аэросъемка</button>
+                  <button class="btn-nav">Монтаж</button>
+                </div>
             <div class="service-content__text js-text-content">
               <div class="service-content__text-title">Панорамы</div>
               <div class="service-content__text-deskription">
@@ -293,7 +308,7 @@
               </div>
             </div>
           </div>
-        </div>
+       
       </section>
     </main>
 
