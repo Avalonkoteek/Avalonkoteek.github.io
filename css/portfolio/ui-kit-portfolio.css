@@ -3,22 +3,25 @@
   --second-color: #bd9d81;
 }
 
-.main-header {
+.portfolio-header {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
+  min-height: 400px;
+  
 }
-.main-header::before,
-.main-header::after {
+.portfolio-header::before,
+.portfolio-header::after {
   content: "";
   position: absolute;
   width: 100%;
 }
-.main-header::before {
+.portfolio-header::before {
   background-color: rgba(24, 24, 26, 0.8);
   height: 100%;
   top: 0;
 }
-.main-header::after {
+.portfolio-header::after {
   bottom: -1px;
   height: 150px;
   background: url("../../img/about/Component\ 3\ –\ 1.svg") no-repeat;
@@ -28,18 +31,20 @@
 
 /* paralax */
 .js-parallax {
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
   height: 100%;
   width: 100%;
-  transition: all 0.1s ease;
   position: absolute;
+  z-index: -1;
+  background: url("../../aaron-huber-384315-unsplash-min.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.1s ease;
   top: 0;
   left: 0;
+  
 }
 
-.main-info {
+.portfolio-header__inner {
   position: relative;
   z-index: 2;
   height: 100%;
@@ -50,170 +55,41 @@
   align-items: center;
 }
 
-.main-info__h1 {
+.portfolio-header__h1 {
   color: #e7e0dd;
-  font-size: var(--h1-fontsize);
+  font-size: 40px;
   font-family: "Josefin Sans";
   font-weight: 300;
   font-style: normal;
   text-align: center;
 }
-
-.centerImg {
-  background-attachment: fixed;
-  background-position: center 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax {
-  position: relative;
-  background-attachment: fixed;
-  background-position: center 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
-
-  height: 80vh;
-}
-.blackFilter {
-  background-color: rgba(24, 24, 26, 0.84);
-
+.portfolio-wrapper{
+  padding: 80px 60px;
+  background-color: rgb(24, 24, 26);
   width: 100%;
-  height: 100%;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}
-
-header {
-  position: absolute;
-  top: 0px;
-  height: 80vh;
+.portfolio-item{
   width: 100%;
+  background-color: #220721;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  flex-direction: column;
-}
-header > h2 {
-  font-style: normal;
-  font-size: 3em;
-}
-.offer {
-  margin: 20px;
-  letter-spacing: 3px;
-  font-size: 1.3em;
-}
-.menu_portfolio {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin-top: 100px;
-}
-.menu_portfolio_unit {
-  color: #888;
-  padding: 20px;
-  font-size: 1em;
-  border-bottom: 1px solid #999;
-  transition: all 0.9s ease;
-  cursor: pointer;
-}
-.menu_portfolio_unit:hover {
-  border-bottom: 1px solid #bd9d81;
-  color: #fff;
-}
-#all_work {
-  border-bottom: 1px solid #bd9d81;
-  color: #fff;
-}
-
-section {
-  width: 100%;
-  display: flex;
+  height: 400px;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding-top: 20px;
+  
 }
-.section_unit {
-  min-width: 300px;
-
-  margin: 20px;
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.portfolio-item:nth-of-type(2n){
+  flex-direction: row-reverse;
 }
-.c-flex-left {
-  min-width: 300px;
-  width: 40%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  order: 2;
+.portfolio-item__visual-box{
+  flex:1 0 300px;
+  background-color: #2b242a;
 }
-.c-flex-right {
-  min-width: 300px;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  order: 1;
+.portfolio-item__text-box{
+  flex:2 0 300px;
+  background-color: #6a6e6e;
 }
 
-.preload {
-  min-height: 200px;
-  height: calc(40vh);
-  width: 100%;
-  background-color: #ddd;
-  background-position: center 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.section-title {
-  color: #bd9d81;
-  font-size: 20px;
-  width: 100%;
-  text-align: left;
-  margin-top: 80px;
-}
-.section-description {
-  text-align: left;
-  font-size: 16px;
-  margin-top: 20px;
-  width: 100%;
-}
-.c-flex-right span {
-  text-decoration: line-through;
-}
 
-@media (min-width: 300px) and (max-width: 480px) {
-  .menu_portfolio {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-  }
-  .section_unit {
-    width: 80%;
-  }
-}
-@media (min-width: 480px) and (max-width: 768px) {
-  .section_unit {
-    width: 80%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-}
 
 /**/
 .effect8 {

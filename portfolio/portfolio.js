@@ -1,6 +1,6 @@
 const requestURL = 'https://avalonkoteek.github.io/portfolio/data.json';
 
-function sendRequest(method, url, body=null){
+function sendRequest(method, url){
     return new Promise((resolve, reject)=>{
     const xhr = new XMLHttpRequest();
     
@@ -21,15 +21,15 @@ function sendRequest(method, url, body=null){
         reject(xhr.response);   //если ошибка
     }
     
-    xhr.send(JSON.stringify(body)); // send request 
     });
     
 }
 function addItem(data){
-    console.log(data['id']);
+    let name_first = data[0].id;
+    console.log(name_first);
 } 
 sendRequest('GET', requestURL)
-.then(data=> console.log(data['id']))
+.then(data=> addItem(data))
 .catch(err => console.log(err));
 
 // sendRequest('POST', requestURL,body)
