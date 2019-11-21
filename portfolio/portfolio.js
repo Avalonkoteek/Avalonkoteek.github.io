@@ -29,7 +29,7 @@ function addItem(data){
     console.log(name_first);
 } 
 sendRequest('GET', requestURL)
-.then(data=> addItem(data))
+.then(addItem(data))
 .catch(err => console.log(err));
 
 // sendRequest('POST', requestURL,body)
