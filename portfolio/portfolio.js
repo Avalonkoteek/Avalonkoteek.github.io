@@ -1,4 +1,4 @@
-const requestURL = 'https://jsonplaceholder.typicode.com/users';
+const requestURL = 'https://avalonkoteek.github.io/portfolio/data.json';
 
 function sendRequest(method, url, body=null){
     return new Promise((resolve, reject)=>{
@@ -25,13 +25,10 @@ function sendRequest(method, url, body=null){
     });
     
 }
-// sendRequest('GET', requestURL)
-// .then(data=> console.log(data))
-// .catch(err => console.log(err));
-const body ={
-    name: 'Dima',
-    age:'23'
-}
-sendRequest('POST', requestURL,body)
+sendRequest('GET', requestURL)
 .then(data=> console.log(data))
 .catch(err => console.log(err));
+
+// sendRequest('POST', requestURL,body)
+// .then(data=> console.log(data))
+// .catch(err => console.log(err));

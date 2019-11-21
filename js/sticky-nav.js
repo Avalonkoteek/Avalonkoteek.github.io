@@ -7,14 +7,14 @@ class StickyNavigation {
     const burger = $(".burger");
     const nav = $(".nav-links");
 
-    $(".js-nav-link").click(function() {
-      self.onLinkClick(event, $(this));
+    // $(".js-nav-link").click(function() {
+    //   self.onLinkClick(event, $(this));
 
-      if (burger.hasClass("toggle")) {
-        burger.removeClass("toggle");
-        nav.removeClass("nav-active");
-      }
-    });
+    //   if (burger.hasClass("toggle")) {
+    //     burger.removeClass("toggle");
+    //     nav.removeClass("nav-active");
+    //   }
+    // });
 
     $(window).scroll(() => {
       this.onScroll();
