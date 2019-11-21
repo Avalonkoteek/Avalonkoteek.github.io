@@ -29,7 +29,13 @@ function addItem(data){
     console.log(name_first);
 } 
 sendRequest('GET', requestURL)
-.then(addItem(data))
+.then(data => {
+    let arr=[];
+    data.forEach(element => {
+        arr.push(element);
+    });
+    addItem(arr);
+})
 .catch(err => console.log(err));
 
 // sendRequest('POST', requestURL,body)
