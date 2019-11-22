@@ -132,5 +132,19 @@
         "url": "sDLtM0el8Yw"
       }
     ]
+  },
+  {
+    "id": "10",
+    "title": "Slider",
+    "text": "Make a slider",
+    "format": "Аэросъемка + видеосъёмка + инфографика + монтаж.",
+    "price": "15 000",
+    "time": "3 часа",
+    "type": [
+      {
+        "visualType": "photo",
+        "url": ["1.jpg","2.jpg", "3.jpg"]
+      }
+    ]
   }
 ]

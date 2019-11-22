@@ -63,6 +63,26 @@
   font-style: normal;
   text-align: center;
 }
+
+
+/* inputs */
+
+
+.portfolio-navigation {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+}
+.portfolio-navigation__tab{
+  color:#e7e0dd;
+  border-bottom: 1px solid #e7e0dd;
+  padding: 10px 20px;
+  transition: all 0.4s ease;
+}
+.portfolio-navigation__tab:hover{
+  border-bottom: 1px solid #bd9d81;
+}
 .portfolio-wrapper{
   padding: 80px 60px;
   background-color: rgb(24, 24, 26);
