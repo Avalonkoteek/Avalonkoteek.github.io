@@ -1,6 +1,8 @@
 const requestURL =
   "http://127.0.0.1:5500/portfolio/data.json";
+let $btn = $(".js-tab");
 
+//get dataJson
 sendRequest("GET", requestURL)
   .then(data => addContent(data))
   .catch(err => console.log(err));
@@ -8,24 +10,26 @@ sendRequest("GET", requestURL)
 function sendRequest(method, url) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
-
     xhr.open(method, url);
     xhr.responseType = "json";
-
     xhr.onload = () => {
       if (xhr.status >= 400) {
         reject(xhr.response);
       }
       resolve(xhr.response);
     };
-
     xhr.onerror = () => {
       reject(xhr.response);
     };
-
     xhr.send();
   });
 }
+//inpusts checked
+$btn.on('click',function(){
+ $btn.attr('data-checked', 'false');
+ $(this).attr('data-checked', 'true');
+});
+
 
 function addItem(data) {
   const videoArr = data.filter(element => element.type == "video");
