@@ -83,6 +83,7 @@
 }
 .portfolio-navigation__tab:hover{
   border-bottom: 1px solid #bd9d81;
+  color:#bd9d81;
 }
 .portfolio-wrapper{
   padding: 80px 60px;
@@ -111,6 +112,14 @@
   height: 90%;
 
 }
+.portfolio-item__visual-content{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  
+}
+
+
 .portfolio-item__visual-text{
   color:#888;
 }
