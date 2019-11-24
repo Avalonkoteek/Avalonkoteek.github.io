@@ -61,6 +61,7 @@ function sortData(type) {
   });
   return newData;
 }
+
 function addContent(SortData) {
   SortData.forEach(element => {
     createElement(element);
@@ -130,11 +131,21 @@ function createElement(element) {
       let $visualContentItem = $(
         '<div class="portfolio-item__visual-item" data-url="' +
           el.url +
-          '" data-type="video"></div>');
+          '" data-type="video"></div>'
+      );
     }
   });
   // слайдер
   // video
+
+  class Slider {
+    constructor() {
+      //
+      let $itemList;
+      let $itemWrapper;
+      let $navigationBtn;
+    }
+  }
   class LightboxIframe {
     constructor(type, url) {
       if (type == "youtube") {
