@@ -8,7 +8,6 @@
   width: 100%;
   height: 50vh;
   min-height: 400px;
-  
 }
 .portfolio-header::before,
 .portfolio-header::after {
@@ -38,10 +37,9 @@
   background: url("../../aaron-huber-384315-unsplash-min.jpg") no-repeat;
   background-position: center;
   background-size: cover;
-  transition: all 0.1s ease;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   top: 0;
   left: 0;
-  
 }
 
 .portfolio-header__inner {
@@ -64,133 +62,128 @@
   text-align: center;
 }
 
-
 /* inputs */
-
 
 .portfolio-navigation {
   display: flex;
   width: 100%;
   justify-content: center;
   position: relative;
-
 }
-.portfolio-navigation__tab{
-  color:#e7e0dd;
+.portfolio-navigation__tab {
+  color: #e7e0dd;
   border-bottom: 1px solid #e7e0dd;
   padding: 10px 20px;
   transition: all 0.4s ease;
 }
-.portfolio-navigation__tab:hover{
+.portfolio-navigation__tab:hover {
   border-bottom: 1px solid #bd9d81;
-  color:#bd9d81;
+  color: #bd9d81;
 }
 
-
 /* Items */
-.portfolio-wrapper{
+.portfolio-wrapper {
   padding: 80px 60px;
   background-color: rgb(24, 24, 26);
   width: 100%;
 }
 
-.portfolio-item{
+.portfolio-item {
   width: 100%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.11), 0 3px 6px rgba(0,0,0,0.10);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.11), 0 3px 6px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   overflow: hidden;
   display: flex;
   height: 400px;
   flex-wrap: wrap;
   margin-bottom: 40px;
-  transition:all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.portfolio-item:hover{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12), 0 15px 12px rgba(0,0,0,0.10);
+.portfolio-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 15px 12px rgba(0, 0, 0, 0.1);
 }
-.portfolio-item:nth-of-type(2n){
+.portfolio-item:nth-of-type(2n) {
   flex-direction: row-reverse;
 }
-.portfolio-item__visual-container{
-  flex:1 0 300px;
+.portfolio-item__visual-container {
+  flex: 1 0 300px;
   border-radius: 5px;
   overflow: hidden;
 }
-.portfolio-item__text-container{
-  padding-left:40px;
-  flex:2 0 300px;
-  color:#eee;
+.portfolio-item__text-container {
+  padding-left: 40px;
+  flex: 2 0 300px;
+  color: #eee;
 }
-.portfolio-item__image-wrapper{
+.portfolio-item__image-wrapper {
   position: relative;
   width: 100%;
   height: 90%;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12), 0 15px 12px rgba(0,0,0,0.10);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 15px 12px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   overflow: hidden;
 }
-.portfolio-item__image{
+.portfolio-item__image {
   width: 100%;
   height: 100%;
 }
-.portfolio-item__image-under-text{
-  margin-top:10px;
+.portfolio-item__image-under-text {
+  margin-top: 10px;
   margin-bottom: 10px;
-  color:#888;
+  color: #888;
 }
 
-.portfolio-item__title{
-  margin-top:20px;
-  color:#bd9d81;
+.portfolio-item__title {
+  margin-top: 20px;
+  color: #bd9d81;
   font-size: 30px;
 }
-.portfolio-item__decription{
+.portfolio-item__decription {
   width: 100%;
 }
-.portfolio-item__format{
-  margin-top:20px;
+.portfolio-item__format {
+  margin-top: 20px;
 }
 
-
-
 /* Slider */
-.js-slider-wrapper{
+.js-slider-wrapper {
   position: relative;
   overflow: hidden;
 }
-.js-visual-content{
-position: absolute;
-z-index: 2;
+.js-visual-content {
+  position: absolute;
+  z-index: 2;
 }
-.is-selected{
-transform: translateX(0);
+.is-selected {
+  transform: translateX(0);
 }
-.move-right{
+.move-right {
   transform: translateX(100%);
 }
-.move-left{
+.move-left {
   transform: translateX(-100%);
 }
-.js-slider-btnWrapper{
-position: absolute;
-z-index: 3;
-width: 100%;
-background-color: rgba(0, 0, 0, 0.7);
-bottom: 0;
-left:0;
-transform: translateX(0);
-display: flex;
-border:none;
+.js-slider-btnWrapper {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  left: 0;
+  transform: translateX(0);
+  display: flex;
+  border: none;
 }
-.js-slider-btn{
-color:#fff;
-width: 50%;
-padding: 10px;
-transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+.js-slider-btn {
+  color: #fff;
+  width: 50%;
+  padding: 10px;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: pointer;
 }
-.js-slider-btn:hover{
+.js-slider-btn:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
-.inactive{
- opacity: 0;
+.inactive {
+  opacity: 0;
 }

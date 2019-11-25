@@ -14,7 +14,7 @@ $(document).ready(function() {
       let diff = scroll - offset;
       let ratio = Math.round((diff / height) * 100);
 
-      $(this).css("transform", "translateY( " + parseInt(ratio * 0.6) + "px)");
+      $(this).css("transform", "translateY( " + parseInt(ratio * 0.9) + "px)");
     });
   }
 });
