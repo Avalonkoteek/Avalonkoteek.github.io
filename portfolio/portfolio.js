@@ -1,5 +1,5 @@
 const requestURL =
-  "http://127.0.0.1:5500/VideoServise-website/portfolio/data.json";
+  "http://127.0.0.1:5500/portfolio/data.json";
 
 let type = "all";
 let AllData = [];
