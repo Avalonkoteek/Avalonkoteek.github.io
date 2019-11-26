@@ -1,11 +1,10 @@
-$(document).ready(function($) {
-    let $sliderWrapper = $(".js-slider");
-    new Slider($sliderWrapper);
 
-});
+let $sliderWrapper = $(".js-slider");
+    new Slider($sliderWrapper);
     
     class Slider{
         constructor($contentWrapper){
+          console.log("qqq");
             $contentWrapper.each(function() {
                 let $imageWrapper = $(this).find(".js-slider-wrapper");
                 let $imagesList = $(this).find(".js-visual-content");

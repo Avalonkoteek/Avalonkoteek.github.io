@@ -4,6 +4,9 @@ const requestURL =
 let type = "all";
 let AllData = [];
 let $btn = $(".js-tab");
+
+let $sliderWrapper = $(".js-slider");
+    
 //ПОЛУЧЕНИЕ
 sendRequest("GET", requestURL)
   .then(data => {
@@ -47,6 +50,7 @@ function removeContent() {
 ////
 
 function updateContent() {
+  new Slider($sliderWrapper);
   let newData = [];
   if (type == "all") {
     addContent(AllData);
@@ -74,30 +78,31 @@ function createElement(element) {
   let time = element.time;
   let format = element.format;
 
+
   // base blocks
   let $ul__wrapper = $(".js-portfolio-wrapper");
   let $li = $('<li class="portfolio-item"></li>');
   let $visualContentWrapper = $(
-    '<div class="portfolio-item__visual-box"></div>'
+    '<div class="portfolio-item__visual-container js-slider"></div>'
   );
   let $visualContentItems = $(
-    '<div class="portfolio-item__visual-wrapper js-visual-content effect8 "></div>'
+    '<div class="portfolio-item__image-wrapper js-slider-wrapper"></div>'
   );
   let $priceAndData = $(
-    '<div class="portfolio-item__visual-text">Срок: ' +
+    '<div class="portfolio-item__image-under-text">Срок: ' +
       time +
       ", цена: " +
       price +
       "</div>"
   );
 
-  let $textContentWrapper = $('<div class="portfolio-item__text-box"></div>');
+  let $textContentWrapper = $('<div class="portfolio-item__text-container"></div>');
 
   let $textContentItem__title = $(
     '<h3 class="portfolio-item__title">' + title + "</h3>"
   );
   let $textContentItem__description = $(
-    '<div class="portfolio-item__description">' + decription + "</div>"
+    '<div class="ortfolio-item__decription">' + decription + "</div>"
   );
   let $textContentItem__format = $(
     '<div class="portfolio-item__format">' + format + "</div>"
@@ -119,11 +124,9 @@ function createElement(element) {
     let type = el.visualType;
     if (type == "video") {
       let $visualContentItem = $(
-        '<div class="portfolio-item__visual-item" data-url="' +
+        '<div class="lightbox lightbox-js lightbox-iframe-js" data-url="' +
           el.url +
-          '" data-type="video">VIDEO' +
-          el.url +
-          "</div>"
+          '" data-type="video"></div>'
       );
       $visualContentItems.append($visualContentItem);
     }
@@ -131,7 +134,7 @@ function createElement(element) {
       let $visualContentItem = $(
         '<div class="portfolio-item__visual-item" data-url="' +
           el.url +
-          '" data-type="video"></div>'
+          '" data-type="panorama"></div>'
       );
     }
   });
@@ -211,24 +214,6 @@ $().each(function() {
 
 $(function() {
   let lightboxButton = $(".lightbox-js");
-  const ImageArray__processing = [
-    "img/1.jpg",
-    "img/2.jpg",
-    "img/1.jpg",
-    "img/2.jpg"
-  ];
-  const ImageArray__air_photo = [
-    "img/1.jpg",
-    "img/2.jpg",
-    "img/1.jpg",
-    "img/2.jpg"
-  ];
-  const ImageArray__wide_angle = [
-    "img/1.jpg",
-    "img/2.jpg",
-    "img/1.jpg",
-    "img/2.jpg"
-  ];
 
   lightboxButton.on("click", function(event) {
     //create lightbox wrapper
@@ -274,127 +259,86 @@ $(function() {
   });
 });
 
-class LightboxIframe {
-  constructor(type, url) {
-    if (type == "youtube") {
-      $("lightbox__wrapper").css(
-        "background-image",
-        "url(http://img.youtube.com/vi/" + url + "/sddefault.jpg)"
-      );
 
-      let iframe_url =
-        "https://www.youtube.com/embed/" +
-        url +
-        "?autoplay=1&autohide=1&controls=2";
-      addIframe(iframe_url);
-    } else {
-      addIframe(url);
-    }
-  }
-}
 
-function addIframe(url) {
-  let iframe = $("<iframe/>", {
-    frameborder: "0",
-    src: url,
-    width: $(".lightbox__wrapper").width(),
-    height: $(".lightbox__wrapper").height(),
-    allowfullscreen: "",
-    webkitallowfullscreen: "",
-    mozallowfullscreen: "",
-    oallowfullscreen: "",
-    msallowfullscreen: ""
-  });
-  $(".lightbox__wrapper").append(iframe);
-}
+
+
 
 // Slider
-class LightboxSlider {
-  constructor(UrlImgArray) {
-    //
-    let $navigationButtonPrev = $(
-      "<button class='lightboxNavigation-btn lb-prev'></button>"
-    );
-    let $navigationButtonPost = $(
-      "<button class='lightboxNavigation-btn lb-next'></button>"
-    );
 
-    let ImgArray = [];
-    let $ulImgArray = $("<ul></ul>");
 
-    //append
-    $(".lightbox__wrapper").append($ulImgArray);
-    $(".lightbox__wrapper").append($navigationButtonPrev);
-    $(".lightbox__wrapper").append($navigationButtonPost);
+class Slider{
+  constructor($contentWrapper){
+    console.log("qqq");
+      $contentWrapper.each(function() {
+          let $imageWrapper = $(this).find(".js-slider-wrapper");
+          let $imagesList = $(this).find(".js-visual-content");
 
-    //
-    UrlImgArray.forEach(element => {
-      ImgArray.push($("<li><img src=" + element + "></li>"));
-    });
-    ImgArray.forEach(element => {
-      $ulImgArray.append(element);
-    });
-    addCircleNavigation(ImgArray.length);
-
-    //
-    addSlider();
+          if($imagesList.length>1){
+              let index = getIndexSelectedItem($imagesList);
+              if(index<0){
+                  classUpdate($imagesList.eq(0));
+              }
+              addNavigation($imageWrapper);
+              clickBtnNavigation($(this));
+          }
+      });
   }
 }
+function addNavigation($wrapper){
+  let $btnNavigationWrapper = $('<div class="js-slider-btnWrapper"></div>');
+  let $btnNavigationNext = $('<button class="js-slider-btn js-btn-next">NEXT</button>');
+  let $btnNavigationPrev = $('<button class="js-slider-btn js-btn-prev">PREV</button>');
+  $btnNavigationWrapper.append($btnNavigationPrev);
+  $btnNavigationWrapper.append($btnNavigationNext);
+  $wrapper.append($btnNavigationWrapper);
+}
+function clickBtnNavigation($wrapper){
+  let $imageWrapper = $wrapper.find(".js-slider-wrapper");
+  let $imagesList = $wrapper.find(".js-visual-content");
+  let $btnNavigationWrapper = $imageWrapper.find(".js-slider-btnWrapper");
 
-function addSlider() {
-  //
-  let imageWrapper = $(".lightbox__wrapper ul");
-  let imagesList = imageWrapper.children("li");
-  let btn = $(".lightboxNavigation-btn");
-  let index = returnIndex(imageWrapper, imagesList);
-
-  //
-  if (index == -1) {
-    index = 0;
-  }
-
-  updateButtonNavigation(index, imagesList.length);
-  classUpdate(imagesList.eq(index));
-  //
-  btn.on("click", function(event) {
-    //
-    let direction = $(this);
-
-    //
-    if (!direction.hasClass("lb-btn-inactive")) {
-      if (direction.hasClass("lb-next")) {
-        index++;
-      } else {
-        index--;
+  $wrapper.on("click", ".js-slider-btn", function() {
+      let direction = $(this);
+      let index = getIndexSelectedItem($imagesList);
+      if(index<0){
+          $imagesList.eq(0).addClass("is-selected");
+          index = 0;
       }
-
-      let imageItem = imagesList.eq(index);
+      if (!direction.hasClass("inactive")) {
+          if (direction.hasClass("js-btn-next")) {
+            index++;
+          } else {
+            index--;
+          }
+      }   
+      let imageItem = $imagesList.eq(index);
+      let imageLength = $imagesList.length;
       classUpdate(imageItem);
-      updateButtonNavigation(index, imagesList.length);
-      updateCircleNavigation(index);
-    }
-  });
+      updateBlockNavigation(index, $btnNavigationWrapper, imageLength);
+      });
+}
+function getIndexSelectedItem(itemsList){
+  let parentItemsList = itemsList.parent();
+  return itemsList.index(parentItemsList.children(".is-selected"));
 }
 
-function returnIndex(wrapper, list) {
-  let indexVisibleblock = list.index(wrapper.children("li.is-selected"));
-  return indexVisibleblock;
+
+
+function updateBlockNavigation(index, btnNavigationWrapper, imageLength) {
+let btnNext = btnNavigationWrapper.find(".js-btn-next");
+let btnPrev = btnNavigationWrapper.find(".js-btn-prev");
+
+if (index == 0) {
+  btnPrev.addClass("inactive");
+} else {
+  btnPrev.removeClass("inactive");
 }
-
-function updateButtonNavigation(index, ListLength) {
-  let BtnNext = $(".lb-next");
-  let BtnPrev = $(".lb-prev");
-
-  if (index == 0) {
-    BtnPrev.addClass("lb-btn-inactive");
-  } else {
-    BtnPrev.removeClass("lb-btn-inactive");
-  }
-  if (index + 1 >= ListLength) {
-    BtnNext.addClass("lb-btn-inactive");
-  } else {
-    BtnNext.removeClass("lb-btn-inactive");
-  }
+if (index + 1 >= imageLength) {
+  btnNext.addClass("inactive");
+} else {
+  btnNext.removeClass("inactive");
+}
 }
 
 function classUpdate(item) {
@@ -406,35 +350,13 @@ function classUpdate(item) {
     .removeClass("is-selected")
     .end()
     .prevAll()
-    .addClass("move-left")
     .removeClass("move-right")
+    .addClass("move-left")
     .end()
     .nextAll()
-    .addClass("move-right")
-    .removeClass("move-left");
+    .removeClass("move-left")
+    .addClass("move-right");
 }
 
-// Circle Slider Navigation
-function addCircleNavigation(arrayLenght) {
-  const $lbCircleWrapper = $("<div class='lb-circle-wrapper'></div>");
-  $(".lightbox__wrapper").append($lbCircleWrapper);
 
-  for (let i = 0; i < arrayLenght; i++) {
-    if (i == 0) {
-      $lbCircleWrapper.append(
-        $("<div class='lb-circle lb-circle--is-selected'></div>")
-      );
-    } else {
-      $lbCircleWrapper.append($("<div class='lb-circle'></div>"));
-    }
-  }
-}
-function updateCircleNavigation(indexItem) {
-  let $circleList = $(".lb-circle");
-  for (let i = 0; i < $circleList.length; i++) {
-    $circleList.removeClass("lb-circle--is-selected");
-  }
-  let activeCircle = $circleList.eq(indexItem);
 
-  activeCircle.addClass("lb-circle--is-selected");
-}

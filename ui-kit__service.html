@@ -9,23 +9,22 @@
   </head>
   <body>
     <header class="service-header">
-      <nav class="js-nav">
-        <div class="logo">
-          <h4>LOGO</h4>
-        </div>
-        <ul class="nav-links">
-          <li><a href="ui-kit__main.html" class="hover-1">Главная</a></li>
-          <li><a href="ui-kit_about.html" class="hover-1">О Нас</a></li>
-          <li><a href="js:;" class="hover-1">Услуги</a></li>
-          <li><a href="js:;" class="hover-1">Контакты</a></li>
-          <li><a href="js:;" class="hover-1">Портфолио</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
+        <nav class="js-nav">
+            <a href="#home" class="js-nav-link"><div class="logo">
+              <h4>FitTimes</h4>
+            </div></a>
+            <ul class="nav-links">
+              <li><a href="#about" class="hover-1 js-nav-link">О Нас</a></li>
+              <li><a href="#program" class="hover-1 js-nav-link">Услуги</a></li>
+              <li><a href="#service" class="hover-1 js-nav-link">Портфолио</a></li>
+              <li><a href="#timetable" class="hover-1 js-nav-link">Контакты</a></li>
+            </ul>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+          </nav>
 
       <video
         class="service__video-background"
@@ -366,11 +365,7 @@
       <div class="contact-container">
         <div class="contact-decoration-box">
           <div class="contact-decoration__line"></div>
-          <img
-            src="../img/pattern/send.svg"
-            alt=""
-            class="contact-decoration__img"
-          />
+          <img src="../img/pattern/send.svg" alt="" class="contact-decoration__img" />
         </div>
         <h3 class="contact__h">ОНЛАЙН ЗАЯВКА</h3>
         <div class="contact__description">
@@ -379,30 +374,16 @@
         </div>
 
         <form class="contact-form">
-          <input
-            class="contact-form__item contact-form__item--height-input"
-            type="e-mail"
-            placeholder="e-mail"
-          />
-          <input
-            class="contact-form__item contact-form__item--height-input"
-            type="text"
-            placeholder="Имя"
-          />
-          <textarea
-            class="contact-form__item contact-form__item--height-textarea"
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Сообщение"
-          ></textarea>
-          <button type="submit" class="ui-kit-main__btn">
-            <div class="ui-kit-main__btn-dec">
-              <span class="ui-kit-main__text">Отправить</span>
-              <img src=" img/arrow_right.svg" alt="" class="ui-kit-main__img" />
-            </div>
-          </button>
+          <input class="contact-form__item contact-form__item--height-input" type="e-mail" placeholder="e-mail" />
+          <input class="contact-form__item contact-form__item--height-input" type="text" placeholder="Имя" />
+          <textarea class="contact-form__item contact-form__item--height-textarea" name="" id="" cols="30" rows="10"
+            placeholder="Сообщение"></textarea>
+            <button class="main-info__btn">
+              <div class="main-info__btn--dec">
+                <span class="main-info__btnText">Отправить</span>
+                <img src=" img/main/arrow_right.svg" alt="" class="main-info__btnImg">
+              </div>
+            </button>
         </form>
       </div>
     </section>
