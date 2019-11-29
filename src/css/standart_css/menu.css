@@ -12,20 +12,24 @@ nav {
 .js-nav--top {
   position: fixed;
   top: 0px;
-  background-color: rgba(0, 0, 0, 0.99);
+  background-color: rgba(24, 24, 26, 1);
 }
 .logo {
   position: relative;
   z-index: 100;
   text-transform: uppercase;
-  color: white;
-  letter-spacing: 5px;
-  font-size: 20px;
+  color: #ADB0AE;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 18px;
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.4),
+             0px 2px 9px rgba(0,0,0,0.1),
+             0px 3px 15px rgba(0,0,0,0.1);
 }
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 49%;
+  width: 40%;
 }
 .nav-links li {
   list-style: none;
@@ -39,14 +43,17 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #d4d3d3;
+  color: #ADB0AE;
 
-  font-size: 14px;
+  font-size: 16px;
   min-height: 60px;
   height: 8vh;
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.01);
   transition: all 0.6s ease;
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.2),
+  0px 2px 9px rgba(0,0,0,0.05),
+  0px 3px 15px rgba(0,0,0,0.05);
 }
 
 .burger {
@@ -126,6 +133,7 @@ a {
 }
 .hover-1 {
   position: relative;
+  transition:all 0.5s ease;
 }
 .hover-1:hover {
   color: #fff;
