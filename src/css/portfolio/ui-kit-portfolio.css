@@ -120,12 +120,15 @@
   width: 100%;
   height: 90%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 15px 12px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #000;
   overflow: hidden;
 }
 .portfolio-item__image {
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: all 0.5s ease;
 }
 .portfolio-item__image-under-text {
   margin-top: 10px;
@@ -153,6 +156,9 @@
 .js-visual-content {
   position: absolute;
   z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
 }
 .is-selected {
   transform: translateX(0);
@@ -167,12 +173,14 @@
   position: absolute;
   z-index: 3;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+
   bottom: 0;
   left: 0;
   transform: translateX(0);
   display: flex;
   border: none;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .js-slider-btn {
   color: #fff;
@@ -180,6 +188,24 @@
   padding: 10px;
   transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: pointer;
+  position: relative;
+}
+.js-slider-btn::after,.js-slider-btn::before{
+position: absolute;
+content:"";
+width: 14px;
+height: 1px;
+background-color: #fff;
+top:50%;
+left:50%;
+transform: rotateZ(45deg);
+}
+.js-slider-btn::before{
+  position: absolute;
+  content:"";
+width: 14px;
+height: 1px;
+background-color: #fff;
 }
 .js-slider-btn:hover {
   background-color: rgba(0, 0, 0, 0.9);
@@ -187,3 +213,4 @@
 .inactive {
   opacity: 0;
 }
+

@@ -9,31 +9,16 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="../css/portfolio/style-portfolio.css"
+      href="/src/css/portfolio/style-portfolio.css"
     />
     <title>Видео, фото и аэросъемка недвижемости</title>
   </head>
   <body>
     <header class="portfolio-header">
-        <nav class="js-nav">
-            <a href="#home" class="js-nav-link"><div class="logo">
-              <h4>FitTimes</h4>
-            </div></a>
-            <ul class="nav-links">
-              <li><a href="#about" class="hover-1 js-nav-link">О Нас</a></li>
-              <li><a href="#program" class="hover-1 js-nav-link">Услуги</a></li>
-              <li><a href="#service" class="hover-1 js-nav-link">Портфолио</a></li>
-              <li><a href="#timetable" class="hover-1 js-nav-link">Контакты</a></li>
-            </ul>
-            <div class="burger">
-              <div class="line1"></div>
-              <div class="line2"></div>
-              <div class="line3"></div>
-            </div>
-          </nav>
+      
       <div
         class="js-parallax bg-parallax"
-        data-image-src="img/main/aaron-huber-384315-unsplash-min.jpg"
+        data-image-src="/src/img/main/main-bg.jpg"
       ></div>
 
       <div class="portfolio-header__inner">
@@ -79,7 +64,7 @@
               >
                 1
               </div>
-              <div class="portfolio-item__image js-visual-content">2</div>
+              <div class="portfolio-item__image js-preload js-visual-content" data-image-src="/src/img/portfolio/img/1.jpg">2</div>
               <div class="portfolio-item__image js-visual-content">3</div>
             </div>
             <div class="portfolio-item__image-under-text">
@@ -95,44 +80,12 @@
             <p class="portfolio-item__format">Формат: asjhdjahfhjfhe</p>
           </div>
         </li>
-        <li class="portfolio-item">
-          <div class="portfolio-item__visual-box js-slider">
-            <div
-              class="portfolio-item__visual-wrapper js-slider-wrapper effect8"
-            >
-              <div
-                class="portfolio-item__visual-content js-visual-content"
-                data-img-src=""
-                data-url=""
-                data-type=""
-              >
-                1
-              </div>
-              <div class="portfolio-item__visual-content js-visual-content">
-                2
-              </div>
-              <div class="portfolio-item__visual-content js-visual-content">
-                3
-              </div>
-            </div>
-            <div class="portfolio-item__visual-text">
-              Срок 3 дня. Цена 15 000 руб.
-            </div>
-          </div>
-          <div class="portfolio-i  tem__text-box">
-            <h3 class="portfolio-item__title">Hello</h3>
-            <p class="portfolio-item__decription">
-              Задача: sjhdfbs sdfbksbf sdkbufksjfb sdfbkjsd fakb fdkbd fakbdf
-              adfkba dfiaubf
-            </p>
-            <p class="portfolio-item__format">Формат: asjhdjahfhjfhe</p>
-          </div>
-        </li>
+       
       </ul>
     </section>
-    <script src="../js/jquery-min.js"></script>
+    <script src="/src/js/jquery-min.js"></script>
     <script src="portfolio.js"></script>
-    <script src="slider.js"></script>
-    <script src="../js/parallax.js"></script>
+    <script src="/src/js/js-preload.js"></script>
+    <script src="/src/js/parallax.js"></script>
   </body>
 </html>

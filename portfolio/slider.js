@@ -1,10 +1,6 @@
 
-let $sliderWrapper = $(".js-slider");
-    new Slider($sliderWrapper);
-    
-    class Slider{
+class SliderPortfolio{
         constructor($contentWrapper){
-          console.log("qqq");
             $contentWrapper.each(function() {
                 let $imageWrapper = $(this).find(".js-slider-wrapper");
                 let $imagesList = $(this).find(".js-visual-content");
@@ -22,8 +18,8 @@ let $sliderWrapper = $(".js-slider");
     }
     function addNavigation($wrapper){
         let $btnNavigationWrapper = $('<div class="js-slider-btnWrapper"></div>');
-        let $btnNavigationNext = $('<button class="js-slider-btn js-btn-next">NEXT</button>');
-        let $btnNavigationPrev = $('<button class="js-slider-btn js-btn-prev">PREV</button>');
+        let $btnNavigationNext = $('<button class="js-slider-btn js-btn-next"><</button>');
+        let $btnNavigationPrev = $('<button class="js-slider-btn js-btn-prev">></button>');
         $btnNavigationWrapper.append($btnNavigationPrev);
         $btnNavigationWrapper.append($btnNavigationNext);
         $wrapper.append($btnNavigationWrapper);
@@ -92,7 +88,7 @@ let $sliderWrapper = $(".js-slider");
           .removeClass("move-left")
           .addClass("move-right");
     }
-    
+    new SliderPortfolio($(".js-slider"));
   
 
   

@@ -9,12 +9,10 @@
     "type": [
       {
         "visualType": "video",
-        "url": "lkPnuWdPT6Y"
-      },
-      {
-        "visualType": "video",
-        "url": "lkPnuWdPT6Y"
+        "url": "lkPnuWdPT6Y",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       }
+     
     ]
   },
   {
@@ -27,8 +25,15 @@
     "type": [
       {
         "visualType": "video",
-        "url": "Fut3LCtDZug"
+        "url": "Fut3LCtDZug",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
+      },
+      {
+        "visualType": "panorma",
+        "url": "Fut3LCtDZug",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       }
+
     ]
   },
   {
@@ -41,11 +46,13 @@
     "type": [
       {
         "visualType": "video",
-        "url": "VBSt4l7ysnI"
+        "url": "VBSt4l7ysnI",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       },
       {
         "visualType": "panorama",
-        "url": "http://fotovideouslugi.ru/panocity/"
+        "url": "http://fotovideouslugi.ru/panocity/",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       }
     ]
   },
@@ -59,7 +66,8 @@
     "type": [
       {
         "visualType": "video",
-        "url": "kvGxLP_MFXY"
+        "url": "kvGxLP_MFXY",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       }
     ]
   },
@@ -73,11 +81,13 @@
     "type": [
       {
         "visualType": "video",
-        "url": "??"
+        "url": "??",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       },
       {
         "visualType": "panorama",
-        "url": "??"
+        "url": "??",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       }
     ]
   },
@@ -91,7 +101,8 @@
     "type": [
       {
         "visualType": "video",
-        "url": "i97sgiNLqco"
+        "url": "i97sgiNLqco",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       }
     ]
   },
@@ -105,7 +116,8 @@
     "type": [
       {
         "visualType": "video",
-        "url": "rfHNKp_2IrE"
+        "url": "rfHNKp_2IrE",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       }
     ]
   },
@@ -119,7 +131,8 @@
     "type": [
       {
         "visualType": "video",
-        "url": "bBccJIWkmHw"
+        "url": "bBccJIWkmHw",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       }
     ]
   },
@@ -133,7 +146,8 @@
     "type": [
       {
         "visualType": "video",
-        "url": "sDLtM0el8Yw"
+        "url": "sDLtM0el8Yw",
+        "imageUrl":"/src/img/portfolio/img/1.jpg"
       }
     ]
   },
