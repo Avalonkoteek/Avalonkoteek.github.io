@@ -1,23 +1,15 @@
-@import "../standart_css/normalize.css";
+@import "/src/css/standart_css/normalize.css";
 
-@import "../standart_css/base.css";
+@import "/src/css/standart_css/base.css";
 
 @import "../fonts/fonts.css";
 
-@import "../fonts/josefinsans/josefinsans.css";
+@import "/src/css/fonts/josefinsans/josefinsans.css";
 
-@import "../standart_css/menu.css";
+@import "/src/standart_css/menu.css";
 
-@import "../standart_css/contact.css";
-
-@import "../standart_css/footer.css";
-
-@import "../standart_css/lightbox.css";
-
-@import "../standart_css/play_btn.css";
+@import "/src/standart_css/contact.css";
 
 @import "ui-kit-service.css";
 
-@import "slider.css";
-
-@import "lightbox-style.css";
+@import "/src/css/standart_css/lightbox-style.css";

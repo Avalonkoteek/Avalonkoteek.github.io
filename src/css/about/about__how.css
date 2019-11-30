@@ -8,7 +8,7 @@
   align-items: center;
   align-content: center;
   flex-direction: column;
-  background-color: #3a3a3a;
+  background-color: #242323;
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -27,8 +27,8 @@
 .about__h2 {
   text-align: center;
   color: #ccc;
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: 33px;
+  margin-bottom: 80px;
 }
 
 .howWorks__container {

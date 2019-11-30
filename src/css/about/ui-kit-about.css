@@ -14,7 +14,7 @@
 .about-header {
   width: 100%;
   height: 60vh;
-  min-height: 400px;
+  min-height: 500px;
   position: relative;
 }
 .about-header::after,
@@ -67,18 +67,19 @@
 
 .about-header__h {
   color: #eee;
-  font-size: 64px;
-  font-family: "Josefin Sans";
-  font-weight: 300;
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-style: normal;
   margin-bottom: 60px;
 }
 
 .about-header__description {
   color: #999;
-  font-size: 23px;
-  font-family: "Josefin Sans";
-  font-weight: 100;
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+ 
 }
 
 /*About*/
@@ -109,15 +110,17 @@
 
 .about-equip__h2 {
   text-align: center;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-style: normal;
   color: #fff;
-  font-size: 40px;
+  font-size: 33px;
   margin-bottom: 60px;
 }
 
 .about-equip__text {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   text-align: justify;
   max-width: 1380px;
   font-size: 18px;
@@ -184,6 +187,7 @@
   transition: 0.3s all;
 }
 .about-equip__face2 {
+  border-radius: 5px;
   opacity: 0;
   position: absolute;
   height: 100%;
@@ -204,7 +208,8 @@
 .about-equip__deskription {
   line-height: 1.5;
   margin: 0px;
-
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   padding-top: 0px;
   color: #79787c;
   transform: translateY(100%);

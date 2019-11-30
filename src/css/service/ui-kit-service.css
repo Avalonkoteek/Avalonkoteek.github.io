@@ -1,12 +1,12 @@
 *{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 :root{
   --font-size__p:20px;
   --font-size__h1:40px;
-  --font-size__h2: 30px;
+  --font-size__h2: 33px;
 }
 h1{
 font-size: var(--font-size__h1);
@@ -35,6 +35,7 @@ p{
 .service-header__h {
   color: #e2e2e2;
   text-align: center;
+  margin-bottom: 40px;
 }
 .service-header__text{
   color: #a1a1a1;
@@ -47,7 +48,6 @@ p{
   top: 0px;
   left: 0px;
   z-index: -10;
-  /* background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat; */
   background-size: cover;
   transition: 1s opacity;
   background-position: center center;
