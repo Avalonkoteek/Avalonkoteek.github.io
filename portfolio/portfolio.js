@@ -68,7 +68,6 @@ if (index + 1 >= imageLength) {
   btnNext.removeClass("inactive");
 }
 }
-
 function classUpdate(item) {
   item
     .addClass("is-selected")
@@ -86,6 +85,33 @@ function classUpdate(item) {
     .addClass("move-right");
 }
 
+class LightboxIframe {
+  constructor(type, url) {
+    if (type == "video") {
+      let iframe_url =
+        "https://www.youtube.com/embed/" +
+        url +
+        "?autoplay=1&autohide=1&controls=2";
+      addIframe(iframe_url);
+    } else {
+      addIframe(url);
+    }
+  }
+}
+function addIframe(url) {
+  let iframe = $("<iframe/>", {
+    frameborder: "0",
+    src: url,
+    width: $(".lightbox__wrapper").width(),
+    height: $(".lightbox__wrapper").height(),
+    allowfullscreen: "",
+    webkitallowfullscreen: "",
+    mozallowfullscreen: "",
+    oallowfullscreen: "",
+    msallowfullscreen: ""
+  });
+  $(".lightbox__wrapper").append(iframe);
+}
 
 const requestURL ="https://avalonkoteek.github.io/portfolio/data.json";
 let type = "all";
@@ -148,6 +174,30 @@ function updateContent() {
     var imageSrc = $(this).data("image-src");
     $(this).css("background-image", "url(" + imageSrc + ")");
   });
+
+  let lightboxButton = $(".lightbox-js");
+  lightboxButton.on("click", function(event) {
+    var $overlay = $('<div class="lightbox_overlay"></div>');
+    var $wrap = $('<div class="lightbox__wrapper"></div>');
+    let $closeBtn = $('<button class="closeLightbox"></button>');
+
+    $overlay.append($wrap);
+    $("body").prepend($overlay);
+    $overlay.append($closeBtn);
+
+    if ($(this).hasClass("lightbox-iframe-js")) {
+      let url = $(this).data("url");
+      let type = $(this).data("type");
+
+      new LightboxIframe(type, url);
+    }
+    $overlay.show();
+
+    $closeBtn.click(function() {
+      $overlay.remove();
+    });
+  });
+
 }
 function sortData(type) {
   let newData = AllData.filter(item => {
@@ -199,6 +249,7 @@ function createElement(element) {
   $textContentWrapper.append($textContentItem__description);
   $textContentWrapper.append($textContentItem__format);
 
+
   //visual
   element.type.forEach(el => {
     let type = el.visualType;
@@ -212,12 +263,55 @@ function createElement(element) {
     if (type == "panorama") {
       str =  '<div class="portfolio-item__image js-visual-content" data-url="' +
           el.url +
-          '" data-type="panorama"></div>'
+          '" data-type="panorama" data-image-src="'+el.imageUrl+'></div>'
     }
     let $visualContentItem=$(str);
     $visualContentItems.append($visualContentItem);
   });
 }
+let lightboxButton = $(".lightbox-js");
+  lightboxButton.on("click", function(event) {
+    //create lightbox wrapper
+    var $overlay = $('<div class="lightbox_overlay"></div>');
+    var $wrap = $('<div class="lightbox__wrapper"></div>');
+    let $closeBtn = $('<button class="closeLightbox"></button>');
+
+    // append method
+    $overlay.append($wrap);
+    $("body").prepend($overlay);
+    $overlay.append($closeBtn);
+
+    if ($(this).hasClass("lightbox-iframe-js")) {
+      let url = $(this).data("url");
+      let type = $(this).data("type");
+
+      new LightboxIframe(type, url);
+    }
+
+    if ($(this).hasClass("lightbox-slider-js")) {
+      let typeSlidshow = $(this).data("type");
+
+      switch (typeSlidshow) {
+        case "wide-angle":
+          new LightboxSlider(ImageArray__wide_angle);
+          break;
+        case "air-photo":
+          new LightboxSlider(ImageArray__air_photo);
+
+          break;
+        case "processing":
+          new LightboxSlider(ImageArray__processing);
+
+          break;
+        default:
+      }
+    }
+    $overlay.show();
+
+    $closeBtn.click(function() {
+      $overlay.remove();
+    });
+  });
 new SliderPortfolio($(".js-slider"));
   // слайдер
   // video

@@ -1,5 +1,5 @@
 $(function() {
-  let lightboxButton = $(".lightbox-js");
+  
   const ImageArray__processing = [
     "img/1.jpg",
     "img/2.jpg",
@@ -18,7 +18,7 @@ $(function() {
     "img/1.jpg",
     "img/2.jpg"
   ];
-
+  let lightboxButton = $(".lightbox-js");
   lightboxButton.on("click", function(event) {
     //create lightbox wrapper
     var $overlay = $('<div class="lightbox_overlay"></div>');
