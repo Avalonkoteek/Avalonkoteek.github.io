@@ -168,13 +168,13 @@ function updateContent() {
     newData = sortData(type);
     addContent(newData);
   }
-  new SliderPortfolio($(".js-slider"));
+ 
 
   $(".js-preload").each(function() {
     var imageSrc = $(this).data("image-src");
     $(this).css("background-image", "url(" + imageSrc + ")");
   });
-
+  
   let lightboxButton = $(".lightbox-js");
   lightboxButton.on("click", function(event) {
     var $overlay = $('<div class="lightbox_overlay"></div>');
@@ -197,6 +197,8 @@ function updateContent() {
       $overlay.remove();
     });
   });
+  new SliderPortfolio($(".js-slider"));
+
 
 }
 function sortData(type) {
@@ -261,7 +263,7 @@ function createElement(element) {
       
     }
     if (type == "panorama") {
-      str =  '<div class="portfolio-item__image js-visual-content" data-url="' +
+      str =  '<div class="portfolio-item__image js-preload js-visual-content lightbox-iframe-js" data-url="' +
           el.url +
           '" data-type="panorama" data-image-src="'+el.imageUrl+'></div>'
     }
