@@ -5,12 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="/src/css/service/style-service.css" />
+    <link rel="stylesheet" href="/src/css/standart_css/standart-style.css">
+    <link rel="stylesheet" href="/src/css/service/ui-kit-service.css">
+
+    <link rel="stylesheet" href="/src/css/main/ui-kit-main.css">
+    <link rel="stylesheet" href="/src/css/about/style-about.css">
+    <link rel="stylesheet" href="/src/css/portfolio/ui-kit-portfolio.css">
+    <script src="/src/js/jquery-min.js"></script>
   </head>
   <body>
+    
+      <!-- start barba content -->
+  <div id="barba-wrapper">
+      <div class="barba-container">
+      <!-- page content  -->
     <header class="service-header">
-      
-
+        <nav class="js-nav">
+            <a href="/index.html" class="js-nav-link"><div class="logo">
+              <h4>Fotovideouslugi</h4>
+            </div></a>
+            <ul class="nav-links">
+              <li><a href="/index.html" class="hover-1 js-nav-link">Главная</a></li>
+              <li><a href="/about/ui-kit_about.html" class="hover-1 js-nav-link">О Нас</a></li>
+              <li><a href="/services/ui-kit__service.html" class="hover-1 js-nav-link">Услуги</a></li>
+              <li><a href="/portfolio/Portfolio.html" class="hover-1 js-nav-link">Портфолио</a></li>
+              <li><a href="#" class="hover-1 js-nav-link">Контакты</a></li>
+            </ul>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+          </nav>
+    
       <video
         class="service__video-background"
         width="100%"
@@ -293,58 +320,59 @@
           </div>
        
       </section>
+      <section class="additional-services">
+          <!-- <h3>Дополнительные услуги</h3> -->
+          <div class="additional-services__wrapper">
+            <div class="additional-services-item">
+              <div
+                class="additional-services-item__image-box lightbox-js lightbox-iframe-js"
+                data-type="youtube"
+                data-url="rLbFOhm8VUo"
+              >
+                <img
+                  class="additional-services-item__image"
+                  src="/src/img/services/Additional services/инфографика.png"
+                />
+                <div class="filter--black"></div>
+              </div>
+    
+              <div class="additional-services-item__text-box">
+                <p class="">Наглядная</p>
+                <h4 class="additional-services-item__title">Инфографика</h4>
+                <p>
+                  Графический элемент появляющийся или постоянно показанный на
+                  видео, несущий дополнительную информационную и смысловую нагрузку.
+                </p>
+                <p>
+                  Акцент внимания на том, что важно: площадь, год постройки или
+                  сроки сдачи, материал отделки, коммуникации, ближайшая
+                  инфраструктура.
+                </p>
+              </div>
+            </div>
+            <div class="additional-services-item">
+              <div class="additional-services-item__image-box">
+                <img
+                  class="additional-services-item__image"
+                  src="/src/img/services/Additional services/озвучка.gif"
+                />
+                <div class="filter--black"></div>
+              </div>
+    
+              <div class="additional-services-item__text-box">
+                <p class="">Наглядная</p>
+                <h4 class="additional-services-item__title">Озвучка</h4>
+                <p>
+                  Расскажите историю хорошо поставленным и приятным голосом
+                  профессионального диктора, мужской или женский, по вашему желанию.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
 
-    <section class="additional-services">
-      <!-- <h3>Дополнительные услуги</h3> -->
-      <div class="additional-services__wrapper">
-        <div class="additional-services-item">
-          <div
-            class="additional-services-item__image-box lightbox-js lightbox-iframe-js"
-            data-type="youtube"
-            data-url="rLbFOhm8VUo"
-          >
-            <img
-              class="additional-services-item__image"
-              src="/src/img/services/Additional services/инфографика.png"
-            />
-            <div class="filter--black"></div>
-          </div>
 
-          <div class="additional-services-item__text-box">
-            <p class="">Наглядная</p>
-            <h4 class="additional-services-item__title">Инфографика</h4>
-            <p>
-              Графический элемент появляющийся или постоянно показанный на
-              видео, несущий дополнительную информационную и смысловую нагрузку.
-            </p>
-            <p>
-              Акцент внимания на том, что важно: площадь, год постройки или
-              сроки сдачи, материал отделки, коммуникации, ближайшая
-              инфраструктура.
-            </p>
-          </div>
-        </div>
-        <div class="additional-services-item">
-          <div class="additional-services-item__image-box">
-            <img
-              class="additional-services-item__image"
-              src="/src/img/services/Additional services/озвучка.gif"
-            />
-            <div class="filter--black"></div>
-          </div>
-
-          <div class="additional-services-item__text-box">
-            <p class="">Наглядная</p>
-            <h4 class="additional-services-item__title">Озвучка</h4>
-            <p>
-              Расскажите историю хорошо поставленным и приятным голосом
-              профессионального диктора, мужской или женский, по вашему желанию.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="section-contact">
       <div class="contact-container">
         <div class="contact-decoration-box">
@@ -371,10 +399,14 @@
         </form>
       </div>
     </section>
-
-    <script src="/src/js/jquery-min.js"></script>
+    
     <script src="/src/js/service-slider.js"></script>
-    <script src="/src/js/swiper.min.js"></script>
     <script src="/src/js/servise-app.js"></script>
+<!-- end barba content -->
+</div>
+</div>
+    <script src="/src/js/app.js"></script>
+    <script src="/src/js/barba.min.js"></script>
+    <script src="/src/js/page-transition.js"></script>
   </body>
 </html>

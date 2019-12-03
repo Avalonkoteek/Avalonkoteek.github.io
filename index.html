@@ -10,28 +10,38 @@
   <meta name="autor" content="Bykov Dmitry">
   <title>Видео, фото и аэросъемка недвижемости</title>
  
-  <link rel="stylesheet" href="./src/css/main/style-main.css">
+  <link rel="stylesheet" href="/src/css/standart_css/standart-style.css">
+  <link rel="stylesheet" href="/src/css/main/ui-kit-main.css">
+
+  <!-- <link rel="stylesheet" href="/src/css/about/style-about.css">
+  <link rel="stylesheet" href="/src/css/service/ui-kit-service.css">
+  <link rel="stylesheet" href="/src/css/portfolio/ui-kit-portfolio.css"> -->
 </head>
 
 <body>
-  <header class="main-header">
 
-  <nav class="js-nav">
-    <a href="#home" class="js-nav-link"><div class="logo">
-      <h4>Fotovideouslugi</h4>
-    </div></a>
-    <ul class="nav-links">
-      <li><a href="/about/ui-kit_about.html" class="hover-1 js-nav-link">О Нас</a></li>
-      <li><a href="/services/ui-kit__service.html" class="hover-1 js-nav-link">Услуги</a></li>
-      <li><a href="/portfolio/Portfolio.html" class="hover-1 js-nav-link">Портфолио</a></li>
-      <li><a href="#" class="hover-1 js-nav-link">Контакты</a></li>
-    </ul>
-    <div class="burger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-  </nav>
+  <!-- start barba content -->
+  <div id="barba-wrapper">
+  <div class="barba-container">
+  <!-- page content  -->
+  <header class="main-header">
+      <nav class="js-nav">
+          <a href="/index.html" class="js-nav-link"><div class="logo">
+            <h4>Fotovideouslugi</h4>
+          </div></a>
+          <ul class="nav-links">
+            <li><a href="/index.html" class="hover-1 js-nav-link">Главная</a></li>
+            <li><a href="/about/ui-kit_about.html" class="hover-1 js-nav-link">О Нас</a></li>
+            <li><a href="/services/ui-kit__service.html" class="hover-1 js-nav-link">Услуги</a></li>
+            <li><a href="/portfolio/Portfolio.html" class="hover-1 js-nav-link">Портфолио</a></li>
+            <li><a href="#" class="hover-1 js-nav-link">Контакты</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
   <div
   class="js-parallax js-preload parallax"
   data-image-src="./src/img/main/main-bg.jpg"
@@ -124,11 +134,15 @@
       </section>
 
   </main>
+<!-- end barba content -->
+</div>
+</div>
   <script src="./src/js/jquery-min.js"></script>
-  <script src="./src/js/sticky-nav.js"></script>
-  <script src="./src/js/js-preload.js"></script>
+  <script src="/src/js/app.js"></script>
   <script src="./src/js/servise-app.js"></script>
-  <script src="./src/js/parallax.js"></script>
+
+  <script src="/src/js/barba.min.js"></script>
+  <script src="/src/js/page-transition.js"></script>
 
 </body>
 

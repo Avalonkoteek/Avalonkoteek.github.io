@@ -1,17 +1,3 @@
-@import "../standart_css/normalize.css";
-
-@import "../standart_css/base.css";
-
-@import "../fonts/fonts.css";
-
-@import "../fonts/josefinsans/josefinsans.css";
-
-@import "../standart_css/menu.css";
-
-@import "../standart_css/contact.css";
-
-@import "../standart_css/footer.css";
-
 @import "ui-kit-about.css";
 
 @import "about__how.css";

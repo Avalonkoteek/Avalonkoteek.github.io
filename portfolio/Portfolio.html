@@ -6,15 +6,39 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="autor" content="Bykov Dmitry" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/src/css/portfolio/style-portfolio.css"
-    />
     <title>Видео, фото и аэросъемка недвижемости</title>
+    <link rel="stylesheet" href="/src/css/standart_css/standart-style.css">
+    <link rel="stylesheet" href="/src/css/portfolio/ui-kit-portfolio.css">
+
+    <link rel="stylesheet" href="/src/css/main/ui-kit-main.css">
+    <link rel="stylesheet" href="/src/css/about/style-about.css">
+    <link rel="stylesheet" href="/src/css/service/ui-kit-service.css">
+    
   </head>
   <body>
+   
+      <!-- start barba content -->
+  <div id="barba-wrapper">
+      <div class="barba-container">
+      <!-- page content  -->
     <header class="portfolio-header">
+        <nav class="js-nav">
+            <a href="/index.html" class="js-nav-link"><div class="logo">
+              <h4>Fotovideouslugi</h4>
+            </div></a>
+            <ul class="nav-links">
+              <li><a href="/index.html" class="hover-1 js-nav-link">Главная</a></li>
+              <li><a href="/about/ui-kit_about.html" class="hover-1 js-nav-link">О Нас</a></li>
+              <li><a href="/services/ui-kit__service.html" class="hover-1 js-nav-link">Услуги</a></li>
+              <li><a href="/portfolio/Portfolio.html" class="hover-1 js-nav-link">Портфолио</a></li>
+              <li><a href="#" class="hover-1 js-nav-link">Контакты</a></li>
+            </ul>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+          </nav>
       
       <div
         class="js-parallax bg-parallax js-preload"
@@ -83,9 +107,15 @@
        
       </ul>
     </section>
+    <!-- end barba content -->
+</div>
+</div>
     <script src="/src/js/jquery-min.js"></script>
     <script src="portfolio.js"></script>
     <script src="/src/js/js-preload.js"></script>
     <script src="/src/js/parallax.js"></script>
+    <script src="/src/js/sticky-nav.js"></script>
+    <script src="/src/js/barba.min.js"></script>
+    <script src="/src/js/page-transition.js"></script>
   </body>
 </html>
