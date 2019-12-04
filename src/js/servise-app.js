@@ -27,7 +27,7 @@ $(function() {
 
     // append method
     $overlay.append($wrap);
-    $("header").prepend($overlay);
+    $("body").prepend($overlay);
     $overlay.append($closeBtn);
 
     if ($(this).hasClass("lightbox-iframe-js")) {

@@ -1,5 +1,5 @@
 *{
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display';
   font-weight: 400;
   font-style: normal;
 }
@@ -17,11 +17,31 @@ h2{
 p{
   font-size: var(--font-size__p);
 }
+
+
 .service-header{
   width: 100%;
   height: 50vh;
   min-height: 500px;
-  background-color: rgba(0,0,0,.8);
+  position: relative;
+}
+.service-header::before,
+.service-header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+}
+.service-header::before {
+  background-color: rgba(24, 24, 26, 0.9);
+  height: 100%;
+  top: 0;
+}
+.service-header::after {
+  bottom: -1px;
+  height: 150px;
+  background: url("/src/img/about/Component\ 3\ –\ 1.svg") no-repeat;
+  background-position: center bottom;
+  z-index: 2;
 }
 .service-header__inner{
   margin: auto;
@@ -31,6 +51,8 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index:5;
 }
 .service-header__h {
   color: #e2e2e2;
@@ -56,16 +78,18 @@ p{
 
 /********************* main content service */
 .service-main-content {
+  padding-top: 50px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: rgb(24,24,26,1);
 }
 .service-section{
   width: 100%;
   display: flex;
   position: relative;
   flex-wrap: wrap;
-  background-color: #333;
+ 
   flex-direction: row;
 }
 .service-section:nth-of-type(2){
@@ -246,9 +270,6 @@ p{
   background-color: rgba(0, 0, 0, 0.2);
 }
 .additional-services-item__text-box {
-  font-family: "Montserrat";
-  font-weight: 300;
-  font-style: normal;
   margin-left: 40px;
   color: #858588;
 }
@@ -259,9 +280,7 @@ p{
 .additional-services-item__title {
   margin-top: 20px;
   margin-bottom: 16px;
-  font-family: "Montserrat";
-  font-weight: 300;
-  font-style: normal;
+
   font-size: 24px;
   color: #fff;
 }
