@@ -10,12 +10,12 @@ $(document).ready(function($) {
     let imageWrapper = $(this).find(".js-image-wrapper");
     let imagesList = imageWrapper.children(".js-visual-content");
 
-    let textWrapper = $(this).find(".service-content__face2");
+    let textWrapper = $(this).find(".service-section__text-box");
     let textList = textWrapper.children(".js-text-content");
 
     $(this).on(
       "click",
-      ".service-content__face2 .js-tab-trigger button",
+      ".service-section__text-box .js-tab-trigger button",
       function() {
         let indexButton = $(this).index();
         console.log("index:" + indexButton);
