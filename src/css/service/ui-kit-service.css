@@ -24,6 +24,7 @@ p{
   height: 50vh;
   min-height: 500px;
   position: relative;
+  overflow: hidden;
 }
 .service-header::before,
 .service-header::after {
@@ -71,8 +72,7 @@ p{
   left: 0px;
   z-index: -10;
   background-size: cover;
-  transition: 1s opacity;
-  background-position: center center;
+  background-position:  center;
   background-repeat: no-repeat;
 }
 

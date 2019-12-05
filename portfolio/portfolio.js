@@ -4,7 +4,7 @@ class SliderPortfolio{
       $contentWrapper.each(function() {
           let $imageWrapper = $(this).find(".js-slider-wrapper");
           let $imagesList = $(this).find(".js-visual-content");
-
+          console.log($imagesList.length);
           if($imagesList.length>1){
               let index = getIndexSelectedItem($imagesList);
               if(index<0){
@@ -17,6 +17,7 @@ class SliderPortfolio{
   }
 }
 function addNavigation($wrapper){
+  alert("ddd");
   let $btnNavigationWrapper = $('<div class="js-slider-btnWrapper"></div>');
   let $btnNavigationNext = $('<button class="js-slider-btn js-btn-next"></button>');
   let $btnNavigationPrev = $('<button class="js-slider-btn js-btn-prev"></button>');
@@ -175,31 +176,7 @@ function updateContent() {
     $(this).css("background-image", "url(" + imageSrc + ")");
   });
   
-  let lightboxButton = $(".lightbox-js");
-  lightboxButton.on("click", function(event) {
-    var $overlay = $('<div class="lightbox_overlay"></div>');
-    var $wrap = $('<div class="lightbox__wrapper"></div>');
-    let $closeBtn = $('<button class="closeLightbox"></button>');
-
-    $overlay.append($wrap);
-    $("body").prepend($overlay);
-    $overlay.append($closeBtn);
-
-    if ($(this).hasClass("lightbox-iframe-js")) {
-      let url = $(this).data("url");
-      let type = $(this).data("type");
-
-      new LightboxIframe(type, url);
-    }
-    $overlay.show();
-
-    $closeBtn.click(function() {
-      $overlay.remove();
-    });
-  });
   new SliderPortfolio($(".js-slider"));
-
-
 }
 function sortData(type) {
   let newData = AllData.filter(item => {
@@ -271,7 +248,13 @@ function createElement(element) {
     $visualContentItems.append($visualContentItem);
   });
 }
-let lightboxButton = $(".lightbox-js");
+
+
+//start page
+$(document).ready(function() {
+  removeContent();
+  updateContent();
+  let lightboxButton = $(".lightbox-js");
   lightboxButton.on("click", function(event) {
     //create lightbox wrapper
     var $overlay = $('<div class="lightbox_overlay"></div>');
@@ -314,7 +297,7 @@ let lightboxButton = $(".lightbox-js");
       $overlay.remove();
     });
   });
-new SliderPortfolio($(".js-slider"));
-  // слайдер
-  // video
+  
+});
+
 
