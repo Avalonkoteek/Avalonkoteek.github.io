@@ -4,39 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/src/css/standart_css/standart-style.css">
-    
-    <link rel="stylesheet" href="/src/css/main/ui-kit-main.css">
-    <link rel="stylesheet" href="/src/css/service/ui-kit-service.css">
-    <link rel="stylesheet" href="/src/css/portfolio/ui-kit-portfolio.css">
-    <link rel="stylesheet" href="/src/css/about/style-about.css">
+    <link rel="stylesheet" href="../src/css/standart_css/standart-style.css" />
+
+    <link rel="stylesheet" href="../src/css/about/style-about.css" />
 
     <title>Document</title>
   </head>
   <body>
-     
     <header class="about-header">
-        <nav class="js-nav">
-            <a href="/index.html" class="js-nav-link"><div class="logo">
-              <h4>Fotovideouslugi</h4>
-            </div></a>
-            <ul class="nav-links">
-              <li><a href="/index.html" class="hover-1 js-nav-link">Главная</a></li>
-              <li><a href="/about/ui-kit_about.html" class="hover-1 js-nav-link">О Нас</a></li>
-              <li><a href="/services/ui-kit__service.html" class="hover-1 js-nav-link">Услуги</a></li>
-              <li><a href="/portfolio/Portfolio.html" class="hover-1 js-nav-link">Портфолио</a></li>
-              <li><a href="#" class="hover-1 js-nav-link">Контакты</a></li>
-            </ul>
-            <div class="burger">
-              <div class="line1"></div>
-              <div class="line2"></div>
-              <div class="line3"></div>
-            </div>
-          </nav>
-       
-      <div
+      <nav class="js-nav">
+        <a href="../index.html" class="js-nav-link"
+          ><div class="logo">
+            <h4>Fotovideouslugi</h4>
+          </div></a
+        >
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html" class="hover-1 js-nav-link">Главная</a>
+          </li>
+          <li>
+            <a href="../about/ui-kit_about.html" class="hover-1 js-nav-link"
+              >О Нас</a
+            >
+          </li>
+          <li>
+            <a
+              href="../services/ui-kit__service.html"
+              class="hover-1 js-nav-link"
+              >Услуги</a
+            >
+          </li>
+          <li>
+            <a href="../portfolio/Portfolio.html" class="hover-1 js-nav-link"
+              >Портфолио</a
+            >
+          </li>
+          <li>
+            <a href="../Contacts/contact.html" class="hover-1 js-nav-link"
+              >Контакты</a
+            >
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+
+      <!-- <div
         class="js-parallax js-preload parallax"
-        data-image-src="/src/img/about/people-2589252_1280.jpg"
+        data-image-src="../src/img/about/alaska.jpg"
       ></div>
 
       <div class="about-header-info">
@@ -45,9 +63,24 @@
           3 года мы создаем современный, понятный и привлекательный контент для
           рекламы и продвижения недвижимости разного назначения.
         </p>
-      </div>
+      </div> -->
     </header>
     <main>
+      <section class="aboutUs">
+        <div class="section-title section-title__aboutUs">
+          Кто мы и чем занимаемся
+        </div>
+        <div class="aboutUs__wrapper">
+          <div class="aboutUs__description">
+            Мы команда, работающая в сфере видеосъемки недвижимоти уже более 4х
+            лет. Нашими руками реализовнны десятки работ разной степени
+            сложности. Сами снимаем и монтируем, имеется опыт в разработки
+            инфографики
+          </div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
       <section class="about-equip">
         <h2 class="about-equip__h2">Оборудование</h2>
         <div class="about-equip__text">
@@ -61,278 +94,161 @@
           оборудование.
         </div>
 
-        <div class="about-equip__box-wrap about-equip_box-grid">
-          <div class="about-equip__box equip-box1">
-            <div class="about-equip__face1">
-              <img
-                class="about-equip__img"
-                src="/src/img/about/Sony-max.png"
-                alt=""
-              />
-              <h3 class="about-equip__h3">Камера</h3>
+        <div class="card-container">
+          <div class="card">
+            <div class="card__imgBox" data-text="Камера">
+              <img src="../src/img/about/Sony-max.png" alt="" />
             </div>
-            <div class="about-equip__face2">
-              <h3 class="about-equip__h3 h3--transformY">Камера</h3>
-              <div class="about-equip__deskription">
+
+            <div class="card-content">
+              <div>
+                <h3>
+                  Камера
+                </h3>
                 <p>
                   Выбор оборудования зависит от климатических условий и времени
                   суток. Чаще всего мы используем: Sony a7sii и Panasonic GH5.
-                </p>
-                <p>
-                  Данные модели, на сегодняшний день, позволяют получить
-                  максимально качественное изображение в рамках наших задач.
+                  Данные модели, позволяют получить максимально качественное
+                  изображение в рамках наших задач.
                 </p>
               </div>
             </div>
           </div>
-
-          <div class="about-equip__box equip-box2">
-            <div class="about-equip__face1">
-              <img
-                class="about-equip__img"
-                src="/src/img/about/Lince-min.png"
-                alt=""
-              />
-              <h3 class="about-equip__h3">Объектив</h3>
+          <div class="card">
+            <div class="card__imgBox" data-text="Объективы">
+              <img src="../src/img/about/Lince-min.png" alt="" />
             </div>
-            <div class="about-equip__face2">
-              <h3 class="about-equip__h3 h3--transformY">Объектив</h3>
-              <div class="about-equip__deskription">
+
+            <div class="card-content">
+              <div>
+                <h3>
+                  Объективы
+                </h3>
                 <p>
-                    Определяющим фактором картинки являются «глаза» техники – объективы.
-                    Широкоугольная оптика позволяет захватывать намного большую площадь, 
-                    помогает показать даже самые маленькие помещения, как ванная, кладовка, лифт.
-                    Знаком качества является отсутствие искажений прямых линий архитектуры, 
-                    стены сооружений, откосы, элементы интерьера и много другое.
-                    В своей работе мы используем объективы, типа – Canon EF 14mm f/2.8L II USM, и 
-                    Canon EF 11-24мм F / 4L USM.
+                  Широкоугольная оптика позволяет захватывать намного большую
+                  площадь, помогает показать даже самые маленькие помещения, как
+                  ванная, кладовка, лифт.
+                </p>
+
+                <p>
+                  Мы используем – Canon EF 14mm f/2.8L II USM, и Canon EF
+                  11-24мм F / 4L USM.
                 </p>
               </div>
             </div>
           </div>
-
-          <div class="about-equip__box equip-box3">
-            <div class="about-equip__face1">
-              <img
-                class="about-equip__img"
-                src="/src/img/about/Ronin-min.png"
-                alt=""
-              />
-              <h3 class="about-equip__h3 ">Стабилизатор</h3>
+          <div class="card">
+            <div class="card__imgBox" data-text="Стабилизатор">
+              <img src="../src/img/about/Ronin-min.png" alt="" />
             </div>
-            <div class="about-equip__face2">
-              <h3 class="about-equip__h3 h3--transformY">Стабилизатор</h3>
-              <div class="about-equip__deskription">
-                <p>
-                    В зависимости от формата съемки, мы также используем штативы со специальными поворотными и панорамными головками,
 
-                    а так же электронные системы стабилизации –  Ronin S, Zhiyun Crane 2.
+            <div class="card-content">
+              <div>
+                <h3>
+                  Стабилизатор
+                </h3>
+                <p>
+                  В зависимости от формата съемки, мы также используем штативы
+                  со специальными поворотными и панорамными головками, а так же
+                  электронные системы стабилизации – Ronin S, Zhiyun Crane 2.
                 </p>
               </div>
             </div>
           </div>
-
-          <div class="about-equip__box equip-box4">
-            <div class="about-equip__face1">
-              <img
-                class="about-equip__img"
-                src="/src/img/about/drone-min.png"
-                alt=""
-              />
-              <h3 class="about-equip__h3">Дрон</h3>
+          <div class="card">
+            <div class="card__imgBox" data-text="Дрон">
+              <img src="../src/img/about/drone-min.png" alt="" />
             </div>
-            <div class="about-equip__face2">
-              <h3 class="about-equip__h3 h3--transformY">Дрон</h3>
-              <div class="about-equip__deskription">
-                <p>
-                    Для аэросъемок мы используем квадрокоптеры DJI с высоким разрешением съемки до 5,2K - это DJI Inspire 2 со сменной оптикой.
 
-                    Для проектов с не большим бюджетом мы используем более компактную модель DJI Mavic PRO 2, он так же идеально подход
+            <div class="card-content">
+              <div>
+                <h3>
+                  Дрон
+                </h3>
+                <p>
+                  Для аэросъемок мы используем квадрокоптеры DJI с высоким
+                  разрешением съемки до 5,2K - это DJI Inspire 2 со сменной
+                  оптикой. Для проектов с не большим бюджетом мы используем
+                  более компактную модель DJI Mavic PRO 2, он так же идеально
+                  подход.
                 </p>
               </div>
             </div>
           </div>
-
-          <div class="about-equip__box equip-box5">
-            <div class="about-equip__face1">
-              <img
-                class="about-equip__img"
-                src="/src/img/about/Light-min.png"
-                alt=""
-              />
-              <h3 class="about-equip__h3">Свет</h3>
+          <div class="card">
+            <div class="card__imgBox" data-text="Свет">
+              <img src="../src/img/about/Light-min.png" alt="" />
             </div>
-            <div class="about-equip__face2">
-              <h3 class="about-equip__h3 h3--transformY">Свет</h3>
-              <div class="about-equip__deskription">
-                <p>
-                    Для правильного света, либо если съемка проходит в вечернее время, мы обязательно используем дополнительные источники света
 
-                    в виде переносных LED-панелей рассеивающего типа или направленных «пушек».
+            <div class="card-content">
+              <div>
+                <h3>
+                  Свет
+                </h3>
+                <p>
+                  Для правильного света, либо если съемка проходит в вечернее
+                  время, мы обязательно используем дополнительные источники
+                  света в виде переносных LED-панелей рассеивающего типа или
+                  направленных «пушек».
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="howWorks">
-        <h2 class="about__h2">Как мы работаем</h2>
-        <div class="about__line"></div>
 
-        <div class="howWorks__container">
-          <div class="howWorks__item-container">
-            <div
-              class="howWorks__item-box howWorks__item-box--hidden howWorks__item-box--first"
-            >
-              <img src="/src/img/About/txture.png" class="howWorks__item-img" />
-            </div>
+      <section class="contact">
+        <!-- BG -->
+        <div class="contact__background">
+          <div class="contact__decoration-line"></div>
+          <img
+            src="./src/img/send.svg"
+            alt=""
+            class="contact-decoration__img"
+          />
+        </div>
 
-            <div
-              class="howWorks__item-box  howWorks__item-textbox howWorks__item-box--second"
-            >
-              <div class="howWorks__item-designe-groups">
-                <div class="howWorks__item-designe-circle"></div>
-                <div class="howWorks__item-designe-line"></div>
-                <div class="howWorks__item-designe-number">01</div>
-              </div>
-
-              <div class="howWorks__item-h">Свяжитесь с нами</div>
-
-              <div class="howWorks__item-text">
-                Заполните заявку на сайте или позвонить нам на телефон
-              </div>
-            </div>
+        <div class="contact-container">
+          <h3 class="contact__h">ОНЛАЙН ЗАЯВКА</h3>
+          <div class="contact__description">
+            Чтобы задать вопрос, позвоните по телефону или отправте заполненую
+            форму
           </div>
-          <div class="howWorks__item-container">
-            <div
-              class="howWorks__item-box howWorks__item-box--hidden howWorks__item-box--second"
-            >
-              <img src="/src/img/About/txture.png" class="howWorks__item-img" />
-            </div>
 
-            <div
-              class="howWorks__item-box howWorks__item-textbox howWorks__item-box--first"
-            >
-              <div class="howWorks__item-designe-groups">
-                <div class="howWorks__item-designe-circle"></div>
-                <div class="howWorks__item-designe-line"></div>
-                <div class="howWorks__item-designe-number">02</div>
+          <form class="contact-form" action="php/contact-form.php">
+            <input
+              class="contact-form__item contact-form__item--height-input"
+              type="e-mail"
+              placeholder="e-mail"
+            />
+            <input
+              class="contact-form__item contact-form__item--height-input"
+              type="text"
+              placeholder="Имя"
+            />
+            <textarea
+              class="contact-form__item contact-form__item--height-textarea"
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Сообщение"
+            ></textarea>
+            <button class="main-info__btn">
+              <div class="main-info__btn--dec">
+                <span class="main-info__btnText">Отправить</span>
+                <img
+                  src="./src/img/main/arrow_right.svg"
+                  alt=""
+                  class="main-info__btnImg"
+                />
               </div>
-
-              <div class="howWorks__item-h">Составляем план работ(ТЗ)</div>
-
-              <div class="howWorks__item-text">
-                Мы обговариваем детали, точную стоимость и сроки выполнения,
-                высылаем контракт(если необходимо, работа от ИП)
-              </div>
-            </div>
-          </div>
-          <div class="howWorks__item-container">
-            <div
-              class="howWorks__item-box howWorks__item-box--hidden howWorks__item-box--first"
-            >
-              <img src="/src/img/About/txture.png" class="howWorks__item-img" />
-            </div>
-
-            <div
-              class="howWorks__item-box howWorks__item-textbox howWorks__item-box--second"
-            >
-              <div class="howWorks__item-designe-groups">
-                <div class="howWorks__item-designe-circle"></div>
-                <div class="howWorks__item-designe-line"></div>
-                <div class="howWorks__item-designe-number">03</div>
-              </div>
-
-              <div class="howWorks__item-h">Выполнение работ</div>
-
-              <div class="howWorks__item-text">
-                В назначенное место и время мы приезжаем и выполняем работу на
-                месте, вы получаете отснятый материал и вносите предоплату
-                30-50%
-              </div>
-            </div>
-          </div>
-          <div class="howWorks__item-container">
-            <div
-              class="howWorks__item-box howWorks__item-box--hidden howWorks__item-box--second"
-            >
-              <img src="/src/img/About/txture.png" class="howWorks__item-img" />
-            </div>
-
-            <div
-              class="howWorks__item-box howWorks__item-textbox howWorks__item-textbox howWorks__item-box--first"
-            >
-              <div class="howWorks__item-designe-groups">
-                <div class="howWorks__item-designe-circle"></div>
-                <div class="howWorks__item-designe-line"></div>
-                <div class="howWorks__item-designe-number">04</div>
-              </div>
-
-              <div class="howWorks__item-h">Проверка</div>
-
-              <div class="howWorks__item-text">
-                В установленный срок вы получаете работу, и можете внести ваши
-                правки.
-              </div>
-            </div>
-          </div>
-          <div class="howWorks__item-container">
-            <div
-              class="howWorks__item-box howWorks__item-box--hidden howWorks__item-box--first"
-            >
-              <img src="/src/img/About/txture.png" class="howWorks__item-img" />
-            </div>
-
-            <div
-              class="howWorks__item-box  howWorks__item-textbox howWorks__item-box--second"
-            >
-              <div class="howWorks__item-designe-groups">
-                <div class="howWorks__item-designe-circle"></div>
-                <div class="howWorks__item-designe-line"></div>
-                <div class="howWorks__item-designe-number">05</div>
-              </div>
-
-              <div class="howWorks__item-h">Закрытие сделки</div>
-
-              <div class="howWorks__item-text">
-                Вы получаете готовый продукт, вносите оставшуюся часть платежа.
-              </div>
-            </div>
-          </div>
+            </button>
+          </form>
         </div>
       </section>
-      <section class="section-contact">
-          <div class="contact-container">
-            <div class="contact-decoration-box">
-              <div class="contact-decoration__line"></div>
-              <img src="/src/img/send.svg" alt="" class="contact-decoration__img" />
-            </div>
-            <h3 class="contact__h">ОНЛАЙН ЗАЯВКА</h3>
-            <div class="contact__description">
-              Чтобы задать вопрос, позвоните по телефону или отправте заполненую
-              форму
-            </div>
-  
-            <form class="contact-form">
-              <input class="contact-form__item contact-form__item--height-input" type="e-mail" placeholder="e-mail" />
-              <input class="contact-form__item contact-form__item--height-input" type="text" placeholder="Имя" />
-              <textarea class="contact-form__item contact-form__item--height-textarea" name="" id="" cols="30" rows="10"
-                placeholder="Сообщение"></textarea>
-                <button class="main-info__btn">
-                  <div class="main-info__btn--dec">
-                    <span class="main-info__btnText">Отправить</span>
-                    <img src="/src/img/main/arrow_right.svg" alt="" class="main-info__btnImg">
-                  </div>
-                </button>
-            </form>
-          </div>
-        </section>
-  
     </main>
-    <script src="/src/js/jquery-min.js"></script>
-    <script src="/src/js/app.js"></script>
-
-
-   
+    <script src="../src/js/jquery-min.js"></script>
+    <script src="../src/js/app.js"></script>
   </body>
 </html>

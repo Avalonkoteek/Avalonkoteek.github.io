@@ -3,6 +3,13 @@
   --h2-fontsize: 24px;
   --p-fontsize: 20px;
 }
+@media (max-width: 600px) {
+  :root {
+    --h1-fontsize: 25px;
+    --h2-fontsize: 18px;
+    --p-fontsize: 14px;
+  }
+}
 main {
   font-size: var(--p-fontsize);
 }
@@ -54,24 +61,24 @@ main {
 }
 
 .main-info__h1 {
-  color: #ADB0AE;
+  color: #fff;
   font-size: var(--h1-fontsize);
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-style: normal;
   text-align: center;
+  margin-top: 100px;
   margin-bottom: 30px;
-  text-shadow: 0px 1px 3px rgba(0,0,0,0.2),
-  0px 2px 9px rgba(0,0,0,0.05),
-  0px 3px 15px rgba(0,0,0,0.05);
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 2px 9px rgba(0, 0, 0, 0.05),
+    0px 3px 15px rgba(0, 0, 0, 0.05);
 }
 .main-info__h2 {
   text-align: center;
-  color: #ADB0AE;
+  color: #adb0ae;
   font-size: var(--h2-fontsize);
-  text-shadow: 0px 1px 3px rgba(0,0,0,0.2),
-             0px 2px 9px rgba(0,0,0,0.05),
-             0px 3px 15px rgba(0,0,0,0.05);
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 2px 9px rgba(0, 0, 0, 0.05),
+    0px 3px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 80px;
 }
 
 /* button*/
@@ -89,6 +96,7 @@ main {
   cursor: pointer;
   margin-top: 50px;
 }
+
 .main-info__btn::after,
 .main-info__btn::before {
   content: "";
@@ -120,7 +128,7 @@ main {
 }
 
 .main-info__btnText {
-  color: #ADB0AE;
+  color: #adb0ae;
   font-family: "Josefin Sans";
   font-weight: 100;
   font-style: normal;
@@ -132,6 +140,12 @@ main {
   position: absolute;
   top: calc(50% - 8px);
   right: 15px;
+}
+@media (max-width: 600px) {
+  .main-info__btn::after,
+  .main-info__btn::before {
+    display: none;
+  }
 }
 /*********************** Section  */
 
@@ -162,7 +176,7 @@ main {
   transform: scale(1);
   transition: all 0.5s ease;
 }
-.main-video-section__item:hover{
+.main-video-section__item:hover {
   transform: scale(1.03);
 }
 @media screen and (max-width: 1600px) {
@@ -210,18 +224,16 @@ main {
   font-family: "Josefin Sans";
   font-weight: 300;
   font-style: normal;
-  color: #F0F5F2;
-  text-shadow: 0px 1px 3px rgba(0,0,0,0.4),
-             0px 2px 9px rgba(0,0,0,0.1),
-             0px 3px 15px rgba(0,0,0,0.1);
+  color: #f0f5f2;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 2px 9px rgba(0, 0, 0, 0.1),
+    0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 .video-item-content__text {
   text-align: center;
-  color: #ADB0AE;
-  font-size: 18px;
-  text-shadow: 0px 1px 3px rgba(0,0,0,0.4),
-             0px 2px 9px rgba(0,0,0,0.1),
-             0px 3px 15px rgba(0,0,0,0.1);
+  color: #adb0ae;
+
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 2px 9px rgba(0, 0, 0, 0.1),
+    0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 .video-item-content__play-btn {
   position: absolute;

@@ -25,6 +25,11 @@ button {
   cursor: pointer;
   position: relative;
 }
+@media (max-width: 600px) {
+  .lightbox__wrapper {
+    height: 300px;
+  }
+}
 /* close button */
 .closeLightbox {
   position: absolute;
