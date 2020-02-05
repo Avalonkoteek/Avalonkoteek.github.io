@@ -73,9 +73,7 @@ function updateContent() {
   new SliderPortfolio($(".js-slider"));
 }
 function sortData(type) {
-  let newData = AllData.filter(item => {
-    return item.type.filter(element => element.visualType == type).length > 0;
-  });
+  let newData = AllData.filter(item => item.type.visualType === type);
   return newData;
 }
 function addContent(SortData) {

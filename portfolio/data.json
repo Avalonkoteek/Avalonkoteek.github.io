@@ -6,14 +6,11 @@
     "price": "10 000",
     "time": "3 дня",
     "format": "Аэросъемка + монтаж + аэрофото.",
-    "type": [
-      {
-        "visualType": "video",
-        "url": "lkPnuWdPT6Y",
-        "imageUrl":"/src/img/portfolio/img/1.jpg"
-      }
-     
-    ]
+    "type": {
+      "visualType": "video",
+      "url": "lkPnuWdPT6Y",
+      "imageUrl": "/src/img/portfolio/img/1.jpg"
+    }
   },
   {
     "id": "2",
@@ -22,13 +19,11 @@
     "format": "Аэросъемка + инфографика + монтаж.",
     "price": "15 000",
     "time": "5 дней",
-    "type": [
-      {
-        "visualType": "video",
-        "url": "Fut3LCtDZug",
-        "imageUrl":"/src/img/portfolio/img/2.jpg"
-      }
-    ]
+    "type": {
+      "visualType": "video",
+      "url": "Fut3LCtDZug",
+      "imageUrl": "/src/img/portfolio/img/2.jpg"
+    }
   },
   {
     "id": "3",
@@ -37,18 +32,11 @@
     "format": "Аэросъемка + аэропанорама.",
     "price": "20 000",
     "time": "3 дня",
-    "type": [
-      {
-        "visualType": "video",
-        "url": "VBSt4l7ysnI",
-        "imageUrl":"/src/img/portfolio/img/3.jpg"
-      },
-      {
-        "visualType": "panorama",
-        "url": "http://fotovideouslugi.ru/panocity/",
-        "imageUrl":"/src/img/portfolio/img/3.jpg"
-      }
-    ]
+    "type": {
+      "visualType": "panorama",
+      "url": "http://fotovideouslugi.ru/panocity/",
+      "imageUrl": "/src/img/portfolio/img/3.jpg"
+    }
   },
   {
     "id": "4",
@@ -57,13 +45,11 @@
     "format": "Аэросъемка",
     "price": "5 000",
     "time": "1 день",
-    "type": [
-      {
-        "visualType": "video",
-        "url": "kvGxLP_MFXY",
-        "imageUrl":"/src/img/portfolio/img/4.jpg"
-      }
-    ]
+    "type": {
+      "visualType": "video",
+      "url": "kvGxLP_MFXY",
+      "imageUrl": "/src/img/portfolio/img/4.jpg"
+    }
   },
   {
     "id": "5",
@@ -72,18 +58,11 @@
     "format": "Видеосъемка + монтаж + инфографика + панорамы 360",
     "price": "17 000",
     "time": "7 дней",
-    "type": [
-      {
-        "visualType": "video",
-        "url": "??",
-        "imageUrl":"/src/img/portfolio/img/5.jpg"
-      },
-      {
-        "visualType": "panorama",
-        "url": "??",
-        "imageUrl":"/src/img/portfolio/img/5.jpg"
-      }
-    ]
+    "type": {
+      "visualType": "panorama",
+      "url": "??",
+      "imageUrl": "/src/img/portfolio/img/5.jpg"
+    }
   },
   {
     "id": "6",
@@ -96,7 +75,7 @@
       {
         "visualType": "video",
         "url": "i97sgiNLqco",
-        "imageUrl":"/src/img/portfolio/img/6.jpg"
+        "imageUrl": "/src/img/portfolio/img/6.jpg"
       }
     ]
   },
@@ -111,7 +90,7 @@
       {
         "visualType": "video",
         "url": "rfHNKp_2IrE",
-        "imageUrl":"/src/img/portfolio/img/7.jpg"
+        "imageUrl": "/src/img/portfolio/img/7.jpg"
       }
     ]
   },
@@ -122,18 +101,11 @@
     "format": "Аэросъемка + инфографика + монтаж.",
     "price": "13 000",
     "time": "4 дня",
-    "type": [
-      {
-        "visualType": "video",
-        "url": "bBccJIWkmHw",
-        "imageUrl":"/src/img/portfolio/img/8.jpg"
-      },
-      {
-        "visualType": "video",
-        "url": "bBccJIWkmHw",
-        "imageUrl":"/src/img/portfolio/img/8.jpg"
-      }
-    ]
+    "type": {
+      "visualType": "video",
+      "url": "bBccJIWkmHw",
+      "imageUrl": "/src/img/portfolio/img/8.jpg"
+    }
   },
   {
     "id": "9",
@@ -142,26 +114,10 @@
     "format": "Аэросъемка + видеосъёмка + инфографика + монтаж.",
     "price": "15 000",
     "time": "4 дня",
-    "type": [
-      {
-        "visualType": "video",
-        "url": "sDLtM0el8Yw",
-        "imageUrl":"/src/img/portfolio/img/9.jpg"
-      }
-    ]
-  },
-  {
-    "id": "10",
-    "title": "Slider",
-    "text": "Make a slider",
-    "format": "Аэросъемка + видеосъёмка + инфографика + монтаж.",
-    "price": "15 000",
-    "time": "3 часа",
-    "type": [
-      {
-        "visualType": "photo",
-        "url": ["1.jpg","2.jpg", "3.jpg"]
-      }
-    ]
+    "type": {
+      "visualType": "video",
+      "url": "sDLtM0el8Yw",
+      "imageUrl": "/src/img/portfolio/img/9.jpg"
+    }
   }
 ]
