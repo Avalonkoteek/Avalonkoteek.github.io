@@ -1,23 +1,18 @@
 $(function() {
   let lightboxButton = $(".lightbox-js");
   const ImageArray__processing = [
-    "img/1.jpg",
-    "img/2.jpg",
-    "img/1.jpg",
-    "img/2.jpg"
+    "./src/img/service/аэрофото/1-min.jpg",
+    "./src/img/service/аэрофото/1-min.jpg",
+    "./src/img/service/аэрофото/1-min.jpg",
+    "./src/img/service/аэрофото/1-min.jpg"
   ];
   const ImageArray__air_photo = [
-    "img/1.jpg",
-    "img/2.jpg",
-    "img/1.jpg",
-    "img/2.jpg"
+    "./src/img/service/аэрофото/1-min.jpg",
+    "./src/img/service/аэрофото/1-min.jpg",
+    "./src/img/service/аэрофото/1-min.jpg",
+    "./src/img/service/аэрофото/1-min.jpg"
   ];
-  const ImageArray__wide_angle = [
-    "img/1.jpg",
-    "img/2.jpg",
-    "img/1.jpg",
-    "img/2.jpg"
-  ];
+  const ImageArray__wide_angle = ["./img/service/широкий угол/шир2-min.jpg"];
 
   lightboxButton.on("click", function(event) {
     //create lightbox wrapper
