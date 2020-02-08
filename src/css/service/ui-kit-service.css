@@ -82,6 +82,17 @@ p {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media(max-width:1000px){
+  .service__video-background{
+    display: none;
+  }
+  .service-header{
+    background: url(../../img/portfolio/img/6.jpg) no-repeat;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+  }
+}
 
 /********************* main content service */
 .service-main-content {
@@ -108,10 +119,22 @@ p {
 .service-section__text-box {
   flex: 1 0 450px;
   min-height: 500px;
-  height: 50vh;
+height: 50vh;
   position: relative;
   overflow: hidden;
   display: flex;
+}
+@media(max-width:1000px){
+  .service-section{
+    padding-bottom:50px; 
+  }
+  .service-section__visual-box{
+    min-height: 300px;
+  }
+.service-section__text-box {
+
+  min-height: 400px;
+}
 }
 .service-section__text-box {
   padding-bottom: 50px;
@@ -274,9 +297,9 @@ p {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  object-position: center;
+  object-position: bottom;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 
 .slideshow-lightbox-btn {
@@ -327,7 +350,7 @@ p {
 @media (max-width: 910px) {
   .service-section__navigation-group {
     position: absolute;
-    top: 10px;
+    top: 10px;min-height: 400px;
   }
   .service-content__text {
     padding-top: 70px;

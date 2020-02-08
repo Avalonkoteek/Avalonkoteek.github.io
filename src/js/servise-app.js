@@ -1,18 +1,18 @@
 $(function() {
   let lightboxButton = $(".lightbox-js");
   const ImageArray__processing = [
-    "./src/img/service/аэрофото/1-min.jpg",
-    "./src/img/service/аэрофото/1-min.jpg",
-    "./src/img/service/аэрофото/1-min.jpg",
-    "./src/img/service/аэрофото/1-min.jpg"
+    "../src/img/service/Фото/обработка/11.jpg",
+    "../src/img/service/Фото/обработка/22.jpg",
+    "../src/img/service/Фото/обработка/33.jpg",
+ 
   ];
   const ImageArray__air_photo = [
-    "./src/img/service/аэрофото/1-min.jpg",
-    "./src/img/service/аэрофото/1-min.jpg",
-    "./src/img/service/аэрофото/1-min.jpg",
-    "./src/img/service/аэрофото/1-min.jpg"
+    "../src/img/service/Фото/аэрофото/1-min.jpg",
+    "../src/img/service/Фото/аэрофото/2-min.jpg",
+    "../src/img/service/Фото/аэрофото/3-min.jpg",
+    "../src/img/service/Фото/аэрофото/4-min.jpg"
   ];
-  const ImageArray__wide_angle = ["./img/service/широкий угол/шир2-min.jpg"];
+  const ImageArray__wide_angle = ["..src/img/service/широкий угол/шир2-min.jpg"];
 
   lightboxButton.on("click", function(event) {
     //create lightbox wrapper
@@ -113,7 +113,7 @@ class LightboxSlider {
 
     //
     UrlImgArray.forEach(element => {
-      ImgArray.push($("<li><img src=" + element + "></li>"));
+      ImgArray.push($("<li><img class='image--cover' src=" + element + "></li>"));
     });
     ImgArray.forEach(element => {
       $ulImgArray.append(element);

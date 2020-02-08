@@ -25,6 +25,11 @@ button {
   cursor: pointer;
   position: relative;
 }
+.lightbox__wrapper img{
+  background-position: bottom;
+  object-fit: cover;
+  background-size: cover;
+}
 @media (max-width: 600px) {
   .lightbox__wrapper {
     height: 300px;
