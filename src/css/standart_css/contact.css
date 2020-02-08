@@ -176,7 +176,12 @@
 .main-info__btn:hover {
   background-color: rgba(169, 137, 112, 0.7);
 }
-
+@media(max-width:600px){
+  .main-info__btn::after,
+.main-info__btn::before {
+  display: none;
+}
+}
 .main-info__btn--dec {
   position: absolute;
   z-index: 0;

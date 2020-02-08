@@ -108,6 +108,8 @@ p {
 @media(max-width:1000px){
   .service-header{
     height: 100vh;
+    min-height: 300px;
+ 
   }
   .service-header__h {
     margin-bottom: 50px;
@@ -131,12 +133,13 @@ p {
   background-color: rgb(24, 24, 26, 1);
   max-width: 1480px;
   margin: auto;
+
 }
 .service-section {
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 0 var(--padding);
+  padding: 60px var(--padding);
 }
 .service-section:nth-of-type(2) {
   flex-direction: row-reverse;
@@ -285,15 +288,7 @@ padding: 100px var(--padding);
   background-size: cover;
   object-fit: cover;
 }
-.filter--black {
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 220px;
-  position: absolute;
-  z-index: 5;
-  top: 0px;
-  transition: 0.9s all;
-}
+
 .additional-services-item__image-box:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -302,6 +297,7 @@ padding: 100px var(--padding);
 }
 .additional-services-item__text-box {
   color: #79787c;
+  font-size:var(--font-size__p);
 }
 .deskription > p {
   font-size: var(--font-size__p);
@@ -330,19 +326,25 @@ padding: 100px var(--padding);
   width: 250px;
   height: 50px;
   font-size: var(--font-size__p);
-  border: 1px solid #bd9d81;
+  border: 1px solid #18181a;
   position: absolute;
-  bottom: 80px;
+  top:50%;
   text-align: center;
   cursor: pointer;
   padding-top: 6px;
-  background-color: #bd9d81;
+  background-color: #18181a;
   z-index: 5;
-  transform: translateY(0) scale(1);
+  box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.04),
+    3px 3px 4px rgba(0, 0, 0, 0.25);
+
+  transform:  translateY(-50%);
   transition: all 0.4s ease;
 }
 .slideshow-lightbox-btn:hover {
-  transform: translateY(-5px) scale(1.03);
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.04),
+  inset 3px 3px 4px rgba(0, 0, 0, 0.25);
+  color: #bd9d81;
+  
 }
 
 
@@ -365,17 +367,18 @@ padding: 100px var(--padding);
   }
   .service-section__visual-box{
     width: 100%;
-    min-height: 300px;
+    min-height: 350px;
   }
 .service-section__text-box {
   width: 100%;
-  min-height: 400px;
+  min-height: 300px;
 }
 
  .service-content__text{
   padding: 0 0px;
  }
   .service-content__text-title {
+    margin-top:20px;
     margin-bottom: 40px;
   }
   .additional-services__wrapper {
@@ -384,6 +387,12 @@ padding: 100px var(--padding);
   }
   .additional-services-item {
     width: 100%;
-    margin-bottom: 80px;
+   
+    margin-bottom: 0px;
+    flex-direction: column-reverse;
+  }
+  .additional-services-item__image-box{
+    margin-top:60px;
+    margin-bottom:0; 
   }
 }

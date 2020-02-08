@@ -126,7 +126,12 @@ main {
   align-items: center;
   justify-content: center;
 }
-
+@media(max-width:600px){
+  .main-info__btn::after,
+.main-info__btn::before {
+  display: none;
+}
+}
 .main-info__btnText {
   color: #adb0ae;
   font-family: "Josefin Sans";
