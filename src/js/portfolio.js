@@ -1,8 +1,5 @@
 const requestURL = "https://avalonkoteek.github.io/portfolio/data.json";
-let type = "all";
-let AllData = [];
-let $btn = $(".js-tab");
-let $sliderWrapper = $(".js-slider");
+
 
 class LightboxIframe {
   constructor(type, url) {
@@ -79,9 +76,14 @@ function createItem(element) {
   let $itemBox = $(
     '<div class="portfolio-item__box"></div>'
   );
+  let $btn = $('<img class="play-btn"  alt=" " src="../src/img/360-degrees.svg">')
+  if(element.type.visualType==='video'){
+
+  }
+
   let $img =$('<div class="portfolio-item__img-box js-visual-content lightbox-js lightbox-iframe-js" data-url="' +
   element.type.url +
-  '" data-type='+element.type.visualType+'><img src="'+element.type.imageUrl+'" alt=""></div>')
+  '" data-type='+element.type.visualType+'><img src="'+element.type.imageUrl+'" alt=" "></div>')
  
   let $priceAndData = $(
     '<div class="portfolio-item__time">Срок: ' +
@@ -99,7 +101,9 @@ function createItem(element) {
   $li.append($itemBox);
   $li.append($textContentWrapper);
   $itemBox.append($img);
+ 
   $itemBox.append($priceAndData);
+  $itemBox.append($btn);
 
 }
 

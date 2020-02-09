@@ -9,7 +9,7 @@
     "type": {
       "visualType": "video",
       "url": "lkPnuWdPT6Y",
-      "imageUrl": "/src/img/portfolio/img/1.jpg"
+      "imageUrl": "../src/img/portfolio/img/1.jpg"
     }
   },
   {
@@ -22,7 +22,7 @@
     "type": {
       "visualType": "video",
       "url": "Fut3LCtDZug",
-      "imageUrl": "/src/img/portfolio/img/2.jpg"
+      "imageUrl": "../src/img/portfolio/img/2.jpg"
     }
   },
   {
