@@ -4,21 +4,6 @@ let AllData = [];
 let $btn = $(".js-tab");
 let $sliderWrapper = $(".js-slider");
 
-// Получаем данные с сервера
-sendRequest("GET", requestURL)
-  .then(data => {
-    AllData = data.map(item => item);
-  })
-  .catch(err => console.log(err));
-
-$btn.on("click", function() {
-  $btn.attr("data-checked", "false");
-  $(this).attr("data-checked", "true");
-  removeContent();
-  type = $(this).data("type");
-  updateContent();
-});
-
 class LightboxIframe {
   constructor(type, url) {
     if (type == "video") {
@@ -32,6 +17,7 @@ class LightboxIframe {
     }
   }
 }
+
 function addIframe(url) {
   let iframe = $("<iframe/>", {
     frameborder: "0",
@@ -47,117 +33,21 @@ function addIframe(url) {
   $(".lightbox__wrapper").append(iframe);
 }
 
-// request
 
-//ОБРАБОТКА
+// Получаем данные с сервера
+sendRequest("GET", requestURL)
+  .then(data => addContent(data))
+  .catch(err => console.log(err));
 
-function removeContent() {
-  $(".portfolio-item").remove();
-}
-////
 
-function updateContent() {
-  let newData = [];
-  if (type == "all") {
-    addContent(AllData);
-  } else {
-    newData = sortData(type);
-    addContent(newData);
-  }
+function addContent(data) {
 
-  $(".js-preload").each(function() {
-    var imageSrc = $(this).data("image-src");
-    $(this).css("background-image", "url(" + imageSrc + ")");
+  data.forEach(item => {
+    createItem(item);
   });
 
-  new SliderPortfolio($(".js-slider"));
-}
-function sortData(type) {
-  let newData = AllData.filter(item => item.type.visualType === type);
-  return newData;
-}
-function addContent(SortData) {
-  SortData.forEach(element => {
-    createElement(element);
-  });
-}
-function createElement(element) {
-  let title = element.title;
-  let decription = element.text;
-  let price = element.price;
-  let time = element.time;
-  let format = element.format;
-
-  // base blocks
-  let $ul__wrapper = $(".js-portfolio-wrapper");
-  let $li = $('<li class="portfolio-item"></li>');
-  let $visualContentWrapper = $(
-    '<div class="portfolio-item__visual-container js-slider"></div>'
-  );
-  let $visualContentItems = $(
-    '<div class="portfolio-item__image-wrapper js-slider-wrapper"></div>'
-  );
-  let $priceAndData = $(
-    '<div class="portfolio-item__image-under-text">Срок: ' +
-      time +
-      ", цена: " +
-      price +
-      "</div>"
-  );
-
-  let $textContentWrapper = $(
-    '<div class="portfolio-item__text-container"></div>'
-  );
-  let $textContentItem__title = $(
-    '<h3 class="portfolio-item__title">' + title + "</h3>"
-  );
-  let $textContentItem__description = $(
-    '<div class="ortfolio-item__decription">' + decription + "</div>"
-  );
-  let $textContentItem__format = $(
-    '<div class="portfolio-item__format">' + format + "</div>"
-  );
-
-  $ul__wrapper.append($li);
-  $li.append($visualContentWrapper);
-  $li.append($textContentWrapper);
-  $visualContentWrapper.append($visualContentItems);
-  $visualContentWrapper.append($priceAndData);
-  $textContentWrapper.append($textContentItem__title);
-  $textContentWrapper.append($textContentItem__description);
-  $textContentWrapper.append($textContentItem__format);
-
-  //visual
-  element.type.forEach(el => {
-    let type = el.visualType;
-    let str;
-    if (type == "video") {
-      str =
-        '<div class="portfolio-item__image js-preload js-visual-content lightbox-js lightbox-iframe-js" data-url="' +
-        el.url +
-        '" data-type="video" data-image-src="' +
-        el.imageUrl +
-        '"></div>';
-    }
-    if (type == "panorama") {
-      str =
-        '<div class="portfolio-item__image js-preload js-visual-content lightbox-iframe-js" data-url="' +
-        el.url +
-        '" data-type="panorama" data-image-src="' +
-        el.imageUrl +
-        "></div>";
-    }
-    let $visualContentItem = $(str);
-    $visualContentItems.append($visualContentItem);
-  });
-}
-
-//start page
-$(document).ready(function() {
-  removeContent();
-  updateContent();
   let lightboxButton = $(".lightbox-js");
-  lightboxButton.on("click", function(event) {
+  lightboxButton.on("click", function (event) {
     //create lightbox wrapper
     var $overlay = $('<div class="lightbox_overlay"></div>');
     var $wrap = $('<div class="lightbox__wrapper"></div>');
@@ -175,31 +65,51 @@ $(document).ready(function() {
       new LightboxIframe(type, url);
     }
 
-    if ($(this).hasClass("lightbox-slider-js")) {
-      let typeSlidshow = $(this).data("type");
-
-      switch (typeSlidshow) {
-        case "wide-angle":
-          new LightboxSlider(ImageArray__wide_angle);
-          break;
-        case "air-photo":
-          new LightboxSlider(ImageArray__air_photo);
-
-          break;
-        case "processing":
-          new LightboxSlider(ImageArray__processing);
-
-          break;
-        default:
-      }
-    }
+    
     $overlay.show();
 
-    $closeBtn.click(function() {
+    $closeBtn.click(function () {
       $overlay.remove();
     });
   });
-});
+}
+function createItem(element) {
+  let $ul__wrapper = $(".js-portfolio-wrapper");
+  let $li = $('<li class="portfolio-item"></li>');
+  let $itemBox = $(
+    '<div class="portfolio-item__box"></div>'
+  );
+  let $img =$('<div class="portfolio-item__img-box js-visual-content lightbox-js lightbox-iframe-js" data-url="' +
+  element.type.url +
+  '" data-type='+element.type.visualType+'><img src="'+element.type.imageUrl+'" alt=""></div>')
+ 
+  let $priceAndData = $(
+    '<div class="portfolio-item__time">Срок: ' +
+    element.time +
+    ", цена: " +
+    element.price +
+    "</div>"
+  );
+
+  let $textContentWrapper = $(
+    '<div class="portfolio-item__box portfolio-item__text"><h3 class="portfolio-item__title">'+element.title+'</h3><p>'+element.text+'</p><p>'+element.format+'</p></div>'
+  );
+
+  $ul__wrapper.append($li);
+  $li.append($itemBox);
+  $li.append($textContentWrapper);
+  $itemBox.append($img);
+  $itemBox.append($priceAndData);
+
+}
+
+
+
+
+
+
+
+
 
 function sendRequest(method, url) {
   return new Promise((resolve, reject) => {

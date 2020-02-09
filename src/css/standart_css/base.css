@@ -23,6 +23,7 @@ body {
 }   
 a {
     text-decoration: none;
+    user-select:none;
 }
 ul {
     line-height: calc(32/16);
@@ -39,6 +40,7 @@ button {
     outline: none;
     background-color: inherit;
     border: 0;
+    user-select:none;
 }
 
 input, textarea {

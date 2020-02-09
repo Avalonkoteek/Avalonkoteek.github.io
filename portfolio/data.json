@@ -35,7 +35,7 @@
     "type": {
       "visualType": "panorama",
       "url": "http://fotovideouslugi.ru/panocity/",
-      "imageUrl": "/src/img/portfolio/img/3.jpg"
+      "imageUrl": "../src/img/portfolio/img/3.jpg"
     }
   },
   {
@@ -48,7 +48,7 @@
     "type": {
       "visualType": "video",
       "url": "kvGxLP_MFXY",
-      "imageUrl": "/src/img/portfolio/img/4.jpg"
+      "imageUrl": "../src/img/portfolio/img/4.jpg"
     }
   },
   {
@@ -61,7 +61,7 @@
     "type": {
       "visualType": "panorama",
       "url": "??",
-      "imageUrl": "/src/img/portfolio/img/5.jpg"
+      "imageUrl": "../src/img/portfolio/img/5.jpg"
     }
   },
   {
@@ -75,7 +75,7 @@
       {
         "visualType": "video",
         "url": "i97sgiNLqco",
-        "imageUrl": "/src/img/portfolio/img/6.jpg"
+        "imageUrl": "../src/img/portfolio/img/6.jpg"
       }
     ]
   },
@@ -90,7 +90,7 @@
       {
         "visualType": "video",
         "url": "rfHNKp_2IrE",
-        "imageUrl": "/src/img/portfolio/img/7.jpg"
+        "imageUrl": "../src/img/portfolio/img/7.jpg"
       }
     ]
   },
@@ -104,7 +104,7 @@
     "type": {
       "visualType": "video",
       "url": "bBccJIWkmHw",
-      "imageUrl": "/src/img/portfolio/img/8.jpg"
+      "imageUrl": "../src/img/portfolio/img/8.jpg"
     }
   },
   {
@@ -117,7 +117,7 @@
     "type": {
       "visualType": "video",
       "url": "sDLtM0el8Yw",
-      "imageUrl": "/src/img/portfolio/img/9.jpg"
+      "imageUrl": "../src/img/portfolio/img/9.jpg"
     }
   }
 ]
