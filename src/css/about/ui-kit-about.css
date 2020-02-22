@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 100px;
+  font-size: var(--font-size-p);
 }
 .aboutUs::after {
   content: "";
@@ -60,7 +61,6 @@
 .aboutUs__wrapper {
   width: 100%;
 
-  font-size: 18px;
   display: flex;
 
   margin-top: 0px;
@@ -77,6 +77,7 @@
   max-width: 1000px;
   margin: auto;
   margin-top: 30px;
+  font-size: var(--font-size-p);
 }
 .about-equip {
   width: 100%;
@@ -89,12 +90,7 @@
   justify-content: center;
   align-items: center;
   padding: 0px var(--padding);
-}
-@media (max-width: 800px) {
-  .about-equip {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  padding-top: 100px;
 }
 
 .about-equip__h2 {
@@ -112,7 +108,7 @@
   font-weight: 400;
   text-align: justify;
   max-width: 1000px;
-  font-size: 18px;
+  font-size: var(--font-size-p);
   color: #79787c;
   text-indent: 20px;
 }
@@ -220,11 +216,13 @@
   }
 }
 @media (max-width: 1100px) {
-  .card-container {
-    font-size: 16px;
-  }
   :root {
     --font-size-h2: 30px;
+    --font-size-p: 16px;
+  }
+
+  .card-container {
+    font-size: var(--font-size-p);
   }
 }
 
@@ -233,9 +231,14 @@
     --padding: 20px;
     --font-size-h2: 28px;
   }
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-column-gap: 20px;
+  }
   .card {
     flex-direction: column;
     height: auto;
+    width: 100%;
   }
   .card .card__imgBox {
     position: relative;
@@ -254,8 +257,15 @@
   .card-content {
     position: relative;
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
   .card__imgBox::before {
     display: none;
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --padding: 10px;
   }
 }
