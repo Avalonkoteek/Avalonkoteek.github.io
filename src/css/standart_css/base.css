@@ -1,84 +1,88 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-style: normal;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
 }
-:root{
-    --main-color: #18181A;
-    --second-color: #BD9D81;
+:root {
+  --main-color: #18181a;
+  --second-color: #bd9d81;
 }
-    
+
 body {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: #000;
-    line-height: calc(24/16);
-    background-color: var(--main-color);
-    font-weight: 400;
-    font-style: normal;
-    min-width: 320px;
-}   
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  color: #000;
+  line-height: calc(24 / 16);
+  background-color: var(--main-color);
+  font-weight: 400;
+  font-style: normal;
+  min-width: 320px;
+}
 a {
-    text-decoration: none;
-    user-select:none;
+  text-decoration: none;
+  user-select: none;
 }
 ul {
-    line-height: calc(32/16);
+  line-height: calc(32 / 16);
 }
 
-h1, h2, h3 {
-    font-weight: normal;
-    font-style: normal;
-
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  font-style: normal;
 }
 button {
-    width: auto;
-    height: auto;
-    outline: none;
-    background-color: inherit;
-    border: 0;
-    user-select:none;
+  width: auto;
+  height: auto;
+  outline: none;
+  background-color: inherit;
+  border: 0;
+  user-select: none;
 }
 
-input, textarea {
-    border: 0;
-    outline: none;
-    border-bottom: 1px solid #000
+input,
+textarea {
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #000;
 }
-input::placeholder, textarea::placeholder {
-    color: #dadada;
-    font-size: 14px;
+input::placeholder,
+textarea::placeholder {
+  color: #dadada;
+  font-size: 14px;
 }
 @media (width: 1380px) {
-    body {
-        font-size: 18px;
-        line-height: calc(28/18);
-    }
-    h3 {
-        font-size: 18px;
-    }
+  body {
+    font-size: 18px;
+    line-height: calc(28 / 18);
+  }
+  h3 {
+    font-size: 18px;
+  }
 }
-
 
 @media (max-width: 1380px) and (min-width: 768px) {
-    h1, h2 {
-        font-size: 32px;
-        line-height: calc(48/32);
-    }
+  h1,
+  h2 {
+    font-size: 32px;
+    line-height: calc(48 / 32);
+  }
 }
 @media (max-width: 767px) and (min-width: 320px) {
-    body {
-        font-size: 14px;
-        line-height: calc(24/14);
-    }
-    h3 {
-        font-size: 14px;
-    }
-    h1, h2 {
-        font-size: 20px;
-        line-height: calc(30/28);
-    }
+  body {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h1,
+  h2 {
+    font-size: 20px;
+    line-height: calc(30 / 28);
+  }
 }

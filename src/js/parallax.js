@@ -1,8 +1,10 @@
 $(document).ready(function() {
-  $(window).scroll(function(e) {
-    parallax();
-  });
-
+  if (screen.width > 1000) {
+    console.log(screen.width);
+    $(window).scroll(function(e) {
+      parallax();
+    });
+  }
   function parallax() {
     var scroll = $(window).scrollTop();
     var screenHeight = $(window).height();

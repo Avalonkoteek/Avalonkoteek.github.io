@@ -11,12 +11,18 @@
 /*About*/
 .aboutUs {
   width: 100%;
-  background-color: #18181a;
-  padding-top: 140px;
+
   background: url(../../img/about/annie-spratt-sggw4-qDD54-unsplash.jpg);
   background-size: cover;
   object-fit: cover;
   position: relative;
+  height: 50vh;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
 }
 .aboutUs::after {
   content: "";
@@ -27,15 +33,15 @@
   left: 0;
   background: linear-gradient(
     to right,
-    rgba(24, 24, 26, 1) 0%,
-    rgba(24, 24, 26, 0.98) 100%
+    rgba(24, 24, 26, 0.5) 0%,
+    rgba(24, 24, 26, 0.87) 100%
   );
 }
 .aboutUs::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: -1px;
   height: 150px;
   width: 100%;
   background-image: url("../../img/about/dec.svg");
@@ -50,19 +56,16 @@
   position: relative;
   z-index: 4;
 }
-.section-title__aboutUs {
-  margin-top: 80px;
-}
+
 .aboutUs__wrapper {
   width: 100%;
-  color: #79787c;
+
   font-size: 18px;
   display: flex;
 
   margin-top: 0px;
   position: relative;
   padding: 0px var(--padding);
-  padding-bottom: 100px;
 }
 
 .aboutUs__description {
@@ -70,10 +73,10 @@
   width: 100%;
   z-index: 2;
   text-align: center;
-  color: #79787c;
+  color: #aaa;
   max-width: 1000px;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 30px;
 }
 .about-equip {
   width: 100%;

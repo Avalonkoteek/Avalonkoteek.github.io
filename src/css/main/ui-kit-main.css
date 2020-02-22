@@ -31,7 +31,7 @@ main {
 .main-header::after {
   bottom: -1px;
   height: 150px;
-  background: url("/src/img/about/Component\ 3\ –\ 1.svg") no-repeat;
+  background: url("../../img/about/dec.svg") no-repeat;
   background-position: center bottom;
   z-index: 2;
 }
@@ -126,11 +126,11 @@ main {
   align-items: center;
   justify-content: center;
 }
-@media(max-width:600px){
+@media (max-width: 600px) {
   .main-info__btn::after,
-.main-info__btn::before {
-  display: none;
-}
+  .main-info__btn::before {
+    display: none;
+  }
 }
 .main-info__btnText {
   color: #adb0ae;
@@ -212,6 +212,7 @@ main {
 .video-item-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -245,8 +246,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
+
   background: url("/src/img/main/play-button.svg") center;
   background-size: cover;
 }

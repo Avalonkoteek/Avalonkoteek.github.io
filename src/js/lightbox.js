@@ -11,11 +11,6 @@ $(function() {
 
   // click on each images
   $(".youtube").on("click", function(event) {
-    $("lightbox__video").css(
-      "background-image",
-      "url(http://img.youtube.com/vi/" + this.id + "/sddefault.jpg)"
-    );
-
     var iframe_url =
       "https://www.youtube.com/embed/" +
       this.id +
