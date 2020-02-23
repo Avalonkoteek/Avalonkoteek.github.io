@@ -268,4 +268,7 @@
   :root {
     --padding: 10px;
   }
+  .aboutUs__description {
+    text-align: justify;
+  }
 }
